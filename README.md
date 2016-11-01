@@ -16,11 +16,11 @@ Displays charts as images in your email. Note that the chart can be animated (gi
 </mjml>
 ```
 
-<p align="center">
+<!--<p align="center">
   <a href="https://mjml.io/try-it-live/component/chart">
     <img width="100px" src="http://imgh.us/TRYITLIVE.svg" alt="sexy" />
   </a>
-</p>
+</p>-->
 
 
 | attribute                                                                      | description                                    | value examples                                  |
