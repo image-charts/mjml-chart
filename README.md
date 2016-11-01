@@ -1,5 +1,7 @@
 ## mjml-chart for [mjml](https://mjml.io/)
 
+[![Build Status](https://img.shields.io/circleci/project/image-charts/mjml-charts.svg)](https://circleci.com/gh/image-charts/mjml-charts/) [![Deps](https://img.shields.io/david/image-charts/mjml-charts.svg)](https://david-dm.org/image-charts/mjml-charts) [![NPM version](https://img.shields.io/npm/v/stargazerz.svg)](http://badge.fury.io/js/stargazerz) ![extra](https://img.shields.io/badge/actively%20maintained-yes-ff69b4.svg)
+
 Displays charts as images in your email. Note that the chart can be animated (gif) when the `chan` attribute is specified.
 
 ```xml
