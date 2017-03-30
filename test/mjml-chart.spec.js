@@ -67,7 +67,7 @@ describe('mjml-chart', () => {
               chxt="x,y"
               chxl="0:|A|B|C" />
             </mj-body>
-          </mjml>`).render().html).to.contain('<img height="auto" src="https://image-charts.com/chart?cht=bvs&chd=t%3A10%2C20%2C30%7C15%2C25%2C35&chs=300x200&chxt=x%2Cy&chxl=0%3A%7CA%7CB%7CC" style="border:none;border-radius:;display:block;outline:none;text-decoration:none;width:100%;height:auto;" width="300">')
+          </mjml>`).render().html).to.contain('<img height="auto" src="https://image-charts.com/chart?cht=bvs&chd=t%3A10%2C20%2C30%7C15%2C25%2C35&chs=300x200&chxt=x%2Cy&chxl=0%3A%7CA%7CB%7CC" style="border:none;border-radius:0px;display:block;outline:none;text-decoration:none;width:100%;height:auto;" width="300">')
     })
 
     it('should render mjml-image attributes', () => {
@@ -85,7 +85,7 @@ describe('mjml-chart', () => {
             </mj-body>
           </mjml>`).render().html).to
         .contain(`align="left"`)
-        .contain('<img alt="alt" height="auto" src="https://image-charts.com/chart?cht=bvg&chd=t%3A10%2C20%2C30%7C15%2C25%2C35&chs=300x200&chxt=x%2Cy&chxl=0%3A%7CA%7CB%7CC" style="border:none;border-radius:;display:block;outline:none;text-decoration:none;width:100%;height:auto;" width="300">')
+        .contain('<img alt="alt" height="auto" src="https://image-charts.com/chart?cht=bvg&chd=t%3A10%2C20%2C30%7C15%2C25%2C35&chs=300x200&chxt=x%2Cy&chxl=0%3A%7CA%7CB%7CC" style="border:none;border-radius:0px;display:block;outline:none;text-decoration:none;width:100%;height:auto;" width="300">')
     })
   })
 })

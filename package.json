@@ -4,7 +4,8 @@
   "version": "3.0.0",
   "main": "lib/index.js",
   "scripts": {
-    "ci": "npm run --silent update-swagger && npm run --silent update && npm run --silent test && npm run --silent updtr-commit",
+    "ci": "npm run --silent update-swagger && npm run --silent update && npm run --silent test && npm run --silent updtr && npm run release",
+    "release":"git commit -a -m 'prepare for release' && npm-release $(cat ./scripts/swagger.json| jq.node 'get(\"info.version\")')",
     "updtr-commit": "npm run --silent updtr && (git add package.json && git commit -m 'update deps' || true)",
     "updtr": "updtr",
     "test": "mocha --compilers js:babel-register",
@@ -45,10 +46,12 @@
     "babel-register": "^6.24.0",
     "chai": "^3.5.0",
     "chokidar-cli": "^1.2.0",
+    "jq.node": "^1.0.0",
     "markdown-table": "^1.1.0",
     "mjml": "^3.3.0",
     "mjml-cli": "^3.3.0",
     "mocha": "^3.2.0",
+    "npm-release": "^1.0.0",
     "truncate": "^2.0.0",
     "updtr": "^0.2.3"
   }
