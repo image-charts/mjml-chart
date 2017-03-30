@@ -5,6 +5,9 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register",
+    "ci": "npm run --silent test && npm run --silent updtr-commit",
+    "updtr-commit": "npm run --silent updtr && (git add package.json && git commit -m 'update deps' || true)",
+    "updtr": "updtr",
     "test-watch": "mocha -w --compilers js:babel-register",
     "update-swagger": "curl -s https://image-charts.com/swagger.json > scripts/swagger.json",
     "update-swagger-dev": "curl -s http://localhost:8080/swagger.json > scripts/swagger.json",
@@ -26,26 +29,27 @@
   },
   "homepage": "https://mjml.io",
   "dependencies": {
-    "lodash": "^4.14.2",
-    "mjml-core": "3.0.x",
-    "mjml-image": "3.0.x",
-    "react": "15.3.x"
+    "lodash": "^4.17.4",
+    "mjml-core": "^3.3.0",
+    "mjml-image": "^3.3.0",
+    "react": "^15.4.2"
   },
   "devDependencies": {
-    "babel": "^6.5.2",
-    "babel-cli": "^6.18.0",
-    "babel-core": "^6.18.0",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-0": "^6.16.0",
-    "babel-register": "^6.18.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-register": "^6.24.0",
     "chai": "^3.5.0",
     "chokidar-cli": "^1.2.0",
-    "markdown-table": "^1.0.0",
-    "mjml": "^3.0.2",
-    "mjml-cli": "^3.0.2",
-    "mocha": "^3.0.2",
-    "truncate": "^2.0.0"
+    "markdown-table": "^1.1.0",
+    "mjml": "^3.3.0",
+    "mjml-cli": "^3.3.0",
+    "mocha": "^3.2.0",
+    "truncate": "^2.0.0",
+    "updtr": "^0.2.3"
   }
 }
