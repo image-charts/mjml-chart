@@ -18,17 +18,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mjmlio/mjml.git"
+    "url": "git+https://github.com/image-charts/mjml-charts.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mjmlio/mjml/issues"
+    "url": "https://github.com/image-charts/mjml-charts/issues"
   },
   "imageCharts": {
     "documentation": "https://image-charts.com/documentation",
     "api": "https://image-charts.com/chart"
   },
-  "homepage": "https://mjml.io",
+  "homepage": "https://github.com/image-charts/mjml-charts",
   "dependencies": {
     "lodash": "^4.17.4",
     "mjml-core": "^3.3.0",
