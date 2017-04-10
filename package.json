@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "ci": "npm run --silent update-swagger && npm run --silent update && npm run --silent test && npm run --silent updtr && npm run release",
-    "release": "(git commit -a -m 'prepare for release' || true) && (npm-release $(cat ./scripts/swagger.json| jq.node 'get(\"info.version\")') || true) && git remote -v && git push origin master",
+    "release": "(git commit -a -m 'prepare for release' || true) && (npm-release $(cat ./scripts/swagger.json| jq.node 'get(\"info.version\")') || true) && (git checkout master && git push origin master || true)",
     "updtr-commit": "npm run --silent updtr && (git add package.json && git commit -m 'update deps' || true)",
     "updtr": "updtr",
     "test": "mocha --compilers js:babel-register",
