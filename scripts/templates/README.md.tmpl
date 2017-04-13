@@ -1,8 +1,11 @@
 ## mjml-chart for [mjml](https://mjml.io/)
 
-[![Build Status](https://img.shields.io/circleci/project/image-charts/mjml-charts.svg)](https://circleci.com/gh/image-charts/mjml-charts/) [![Deps](https://img.shields.io/david/image-charts/mjml-charts.svg)](https://david-dm.org/image-charts/mjml-charts) [![NPM version](https://img.shields.io/npm/v/mjml-charts.svg)](http://badge.fury.io/js/mjml-charts) ![extra](https://img.shields.io/badge/actively%20maintained-yes-ff69b4.svg)
+[![Build Status](https://img.shields.io/circleci/project/image-charts/mjml-chart.svg)](https://circleci.com/gh/image-charts/mjml-chart/) [![Deps](https://img.shields.io/david/image-charts/mjml-chart.svg)](https://david-dm.org/image-charts/mjml-chart) [![NPM version](https://img.shields.io/npm/v/mjml-chart.svg)](http://badge.fury.io/js/mjml-chart) ![extra](https://img.shields.io/badge/actively%20maintained-yes-ff69b4.svg)
 
 Displays charts as images in your email. Note that the chart can be animated (gif) when the `chan` attribute is specified.
+
+#### 🎩 Usage
+
 
 ```xml
 <mjml>
@@ -10,7 +13,7 @@ Displays charts as images in your email. Note that the chart can be animated (gi
     <mj-container>
       <mj-section>
         <mj-column>
-          <mj-chart chs="300x200" chd="t:10,20,30|15,25,35" cht="bvs" chxt="x,y" chxl="0:|A|B|C" />
+          <mj-chart chs="700x200" chd="s:theresadifferencebetweenknowingthepathandwalkingthepath" cht="bvs" chxt="y" chf="b0,lg,90,4CA4F5,0.1,C371D3,0.8,EA469E,1" />
         </mj-column>
       </mj-section>
     </mj-container>
@@ -19,10 +22,18 @@ Displays charts as images in your email. Note that the chart can be animated (gi
 ```
 
 <p align="center">
-  <a href="https://image-charts.com/chart?cht=bvs&chd=s:theresadifferencebetweenknowingthepathandwalkingthepath&chs=700x200&chxt=y&chf=b0,lg,90,4CA4F5,0.1,C371D3,0.8,EA469E,1">
+  <a href="https://image-charts.com/documentation">
     <img src="https://image-charts.com/chart?cht=bvs&chd=s:theresadifferencebetweenknowingthepathandwalkingthepath&chs=700x200&chxt=y&chf=b0,lg,90,4CA4F5,0.1,C371D3,0.8,EA469E,1" />
   </a>
 </p>
+
+##### 🚀 Setup
+
+```bash
+npm install mjml-chart --save
+```
+
+##### 🚧 Documentation
 
 
 {mdChartAttributesTable}
