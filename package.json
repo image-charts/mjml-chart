@@ -10,6 +10,7 @@
     "updtr": "updtr",
     "test": "mocha --compilers js:babel-register",
     "test-watch": "mocha -w --compilers js:babel-register",
+    "test-coverage": "nyc --all --statements=94 --branches=88 --functions=91 --lines=95 --check-coverage --reporter=lcov --reporter=cobertura --reporter=text --reporter=text-summary --report-dir=coverage -- npm run --silent test",
     "update-swagger": "curl -s https://image-charts.com/swagger.json > scripts/swagger.json",
     "update-swagger-dev": "curl -s http://localhost:8080/swagger.json > scripts/swagger.json",
     "update": "node scripts/generateREADME.js > README.md && node scripts/generateComponent.js > src/index.js && babel src/index.js > lib/index.js",
@@ -19,6 +20,16 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/image-charts/mjml-chart.git"
+  },
+  "nyc": {
+    "exclude": [
+      "node_modules",
+      "examples",
+      "lib",
+      "scripts",
+      "coverage",
+      "**/**.spec.js"
+    ]
   },
   "license": "MIT",
   "bugs": {
@@ -52,6 +63,7 @@
     "mjml-cli": "^3.3.0",
     "mocha": "^3.2.0",
     "npm-release": "^1.0.0",
+    "nyc": "^10.2.0",
     "truncate": "^2.0.0",
     "updtr": "^0.2.3"
   }
