@@ -60,6 +60,8 @@
     "babel-register": "^6.24.0",
     "chai": "^3.5.0",
     "chokidar-cli": "^1.2.0",
+    "conventional-changelog": "^1.1.0",
+    "conventional-changelog-cli": "^1.2.0",
     "coveralls": "^2.13.0",
     "jq.node": "^1.0.0",
     "markdown-table": "^1.1.0",
@@ -69,8 +71,6 @@
     "npm-release": "^1.0.0",
     "nyc": "^10.2.0",
     "truncate": "^2.0.0",
-    "updtr": "^0.2.3",
-    "conventional-changelog": "^1.1.0",
-    "conventional-changelog-cli": "^1.2.0"
+    "updtr": "^1.0.0"
   }
 }
