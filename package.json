@@ -8,7 +8,7 @@
     "release": "(git commit -a -m 'prepare for release' || true) && (npm-release $(cat ./scripts/swagger.json| jq.node 'get(\"info.version\")') || true) && (git push origin master:master || true)",
     "test": "mocha --compilers js:babel-register",
     "test-watch": "mocha -w --compilers js:babel-register",
-    "test-coverage": "nyc --all --statements=100 --branches=93 --functions=100 --lines=100 --check-coverage --reporter=lcov --reporter=cobertura --reporter=text --reporter=text-summary --report-dir=coverage -- npm run --silent test",
+    "test-coverage": "nyc --all --statements=100 --branches=100 --functions=100 --lines=100 --check-coverage --reporter=lcov --reporter=cobertura --reporter=text --reporter=text-summary --report-dir=coverage -- npm run --silent test",
     "coverage-send": "cat ./coverage/lcov.info | coveralls",
     "update-swagger": "curl -s https://image-charts.com/swagger.json > scripts/swagger.json",
     "update-swagger-dev": "curl -s http://localhost:8080/swagger.json > scripts/swagger.json",

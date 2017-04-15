@@ -327,9 +327,7 @@ class Chart extends Component {
 
     const paddingRight = getPadding('right')
     const paddingLeft = getPadding('left')
-    const widthOverflow = paddingLeft + paddingRight + width - parseInt(parentWidth)
-
-    return widthOverflow > 0 ? width - widthOverflow : width
+    return width;
   }
 
   render () {
