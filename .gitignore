@@ -1,2 +1,5 @@
 yarn.lock
 coverage
+node_modules/
+home/
+.nyc_ouput/
