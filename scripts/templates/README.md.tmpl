@@ -1,6 +1,6 @@
 ## mjml-chart for [mjml](https://mjml.io/)
 
-[![Build Status](https://img.shields.io/circleci/project/image-charts/mjml-chart.svg)](https://circleci.com/gh/image-charts/mjml-chart/) [![Deps](https://img.shields.io/david/image-charts/mjml-chart.svg)](https://david-dm.org/image-charts/mjml-chart) [![NPM version](https://img.shields.io/npm/v/mjml-chart.svg)](http://badge.fury.io/js/mjml-chart)  [![Downloads](http://img.shields.io/npm/dm/mjml-chart.svg)](https://www.npmjs.com/package/mjml-chart) ![extra](https://img.shields.io/badge/actively%20maintained-yes-ff69b4.svg)
+[![Build Status](https://img.shields.io/circleci/project/image-charts/mjml-chart.svg)](https://circleci.com/gh/image-charts/mjml-chart/) [![Coveralls branch](https://img.shields.io/coveralls/image-charts/mjml-chart/master.svg)](https://coveralls.io/github/image-charts/mjml-chart) [![Deps](https://img.shields.io/david/image-charts/mjml-chart.svg)](https://david-dm.org/image-charts/mjml-chart) [![NPM version](https://img.shields.io/npm/v/mjml-chart.svg)](http://badge.fury.io/js/mjml-chart)  [![Downloads](http://img.shields.io/npm/dm/mjml-chart.svg)](https://www.npmjs.com/package/mjml-chart) ![extra](https://img.shields.io/badge/actively%20maintained-yes-ff69b4.svg)
 
 Displays charts as images in your email. Note that the chart can be animated (gif) when the `chan` attribute is specified.
 

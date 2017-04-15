@@ -35,7 +35,7 @@ describe('mjml-chart', () => {
           </mj-body>
           </mjml>`).render()
       ).to.throw('cht is required')
-    )
+    );
 
     it('should crash at compile time in case of bad formatted attributes', () =>
       expect(() => {
@@ -51,8 +51,23 @@ describe('mjml-chart', () => {
           </mj-body>
           </mjml>`).render()
       }).to.throw('"aa" is not an valid value for cht. Valid values are: ["bvs","bhs","bvg","bhg","bvo","p","p3","pc","pd","ls","lc","lxy","ls:nda","lc:nda","lxy:nda"]')
-    )
+    );
 
+    it('should crash at compile time in case of bad attribute values', () =>
+      expect(() => {
+        new MJMLRenderer(`
+          <mjml>
+          <mj-body>
+          <mj-chart
+          chs="300x200"
+          chd="INVALID_CHD_VALUE"
+          cht="bvs"
+          chxt="x,y"
+          chxl="0:|A|B|C" />
+          </mj-body>
+          </mjml>`).render()
+      }).to.throw('"INVALID_CHD_VALUE" is an invalid value for chd. Examples: t:10,20,30|15,25,35')
+    );
   });
 
   describe('chart generation', () => {

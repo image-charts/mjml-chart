@@ -6,16 +6,19 @@
   "scripts": {
     "ci": "npm run --silent update-swagger && npm run --silent update && npm run --silent test && npm run --silent updtr && npm run release",
     "release": "(git commit -a -m 'prepare for release' || true) && (npm-release $(cat ./scripts/swagger.json| jq.node 'get(\"info.version\")') || true) && (git push origin master:master || true)",
-    "updtr-commit": "npm run --silent updtr && (git add package.json && git commit -m 'update deps' || true)",
-    "updtr": "updtr",
     "test": "mocha --compilers js:babel-register",
     "test-watch": "mocha -w --compilers js:babel-register",
-    "test-coverage": "nyc --all --statements=94 --branches=88 --functions=91 --lines=95 --check-coverage --reporter=lcov --reporter=cobertura --reporter=text --reporter=text-summary --report-dir=coverage -- npm run --silent test",
+    "test-coverage": "nyc --all --statements=100 --branches=93 --functions=100 --lines=100 --check-coverage --reporter=lcov --reporter=cobertura --reporter=text --reporter=text-summary --report-dir=coverage -- npm run --silent test",
+    "coverage-send": "cat ./coverage/lcov.info | coveralls",
     "update-swagger": "curl -s https://image-charts.com/swagger.json > scripts/swagger.json",
     "update-swagger-dev": "curl -s http://localhost:8080/swagger.json > scripts/swagger.json",
+    "example-html": "babel-node examples/simple-chart.js",
     "update": "node scripts/generateREADME.js > README.md && node scripts/generateComponent.js > src/index.js && babel src/index.js > lib/index.js",
     "update-watch": "chokidar 'scripts/**' 'package.json' -c 'npm run update'",
-    "example-html": "babel-node examples/simple-chart.js"
+    "updtr": "updtr",
+    "updtr-commit": "npm run --silent updtr && (git add package.json && git commit -m 'update deps' || true)",
+    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0",
+    "changelog-commit": "npm run changelog && git add CHANGELOG.md && git commit -m 'docs(changelog): updated' && git push origin master"
   },
   "repository": {
     "type": "git",
@@ -57,6 +60,7 @@
     "babel-register": "^6.24.0",
     "chai": "^3.5.0",
     "chokidar-cli": "^1.2.0",
+    "coveralls": "^2.13.0",
     "jq.node": "^1.0.0",
     "markdown-table": "^1.1.0",
     "mjml": "^3.3.0",
@@ -65,6 +69,8 @@
     "npm-release": "^1.0.0",
     "nyc": "^10.2.0",
     "truncate": "^2.0.0",
-    "updtr": "^0.2.3"
+    "updtr": "^0.2.3",
+    "conventional-changelog": "^1.1.0",
+    "conventional-changelog-cli": "^1.2.0"
   }
 }
