@@ -293,7 +293,7 @@ function buildURL (mjAttribute) {
       const val = mjAttribute(attr.name);
 
       if(attr.required && val === undefined){
-        throw new Error(`${attr.name} is required. Examples values ${attr.examples.join(', ')}`);
+        throw new Error(`${attr.name} is required. Example values ${attr.examples.join(', ')}`);
       }
 
       if (val === undefined) {
@@ -301,11 +301,11 @@ function buildURL (mjAttribute) {
       }
 
       if (attr.pattern && !strToRegExp(attr.pattern).test(val)) {
-        throw new Error(`"${val}" is an invalid value for ${attr.name}. Examples: ${attr.examples.join(', ')}`);
+        throw new Error(`"${val}" is an invalid value for ${attr.name}. Example values: ${attr.examples.join(', ')}`);
       }
 
       if (attr.enum && !includes(attr.enum, val)) {
-        throw new Error(`"${val}" is not an valid value for ${attr.name}. Valid values are: ${JSON.stringify(attr.enum)}`);
+        throw new Error(`"${val}" is not a valid value for ${attr.name}. Valid values are: ${JSON.stringify(attr.enum)}`);
       }
 
       query[attr.name] = val;
@@ -358,4 +358,3 @@ Chart.defaultMJMLDefinition = defaultMJMLDefinition
 Chart.baseStyles = baseStyles
 
 export default Chart
-
