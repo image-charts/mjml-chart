@@ -17,7 +17,7 @@
     "generate-watch": "chokidar 'scripts/**' 'package.json' -c 'npm run generate'",
     "updtr": "updtr",
     "updtr-commit": "npm run --silent updtr && (git add package.json && git commit -m 'update deps' || true)",
-    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0",
+    "changelog": "git checkout master && conventional-changelog -i CHANGELOG.md -s -r 0",
     "changelog-commit": "npm run --silent changelog && (git add CHANGELOG.md && git commit -m 'docs(changelog): updated' || true)",
     "git-push": "git push origin master:master"
   },
