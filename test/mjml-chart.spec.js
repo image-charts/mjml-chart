@@ -6,22 +6,16 @@
  *    npm test
  *
  */
-import {
-  expect
-} from 'chai'
-import {
-  MJMLRenderer,
-  registerMJElement
-} from 'mjml-core'
-import ChartComponent from '../src'
+import { expect } from 'chai';
+import { MJMLRenderer, registerMJElement } from 'mjml-core';
+import ChartComponent from '../src';
 
 describe('mjml-chart', () => {
   before(() => {
     registerMJElement(ChartComponent);
-  })
+  });
 
   describe('compile-time error handling', () => {
-
     it('should crash at compile time in case of missing (cht) required attributes', () =>
       expect(() =>
         new MJMLRenderer(`
@@ -34,8 +28,7 @@ describe('mjml-chart', () => {
           chxl="0:|A|B|C" />
           </mj-body>
           </mjml>`).render()
-      ).to.throw('cht is required')
-    );
+      ).to.throw('cht is required'));
 
     it('should crash at compile time in case of bad formatted attributes', () =>
       expect(() => {
@@ -49,9 +42,10 @@ describe('mjml-chart', () => {
           chxt="x,y"
           chxl="0:|A|B|C" />
           </mj-body>
-          </mjml>`).render()
-      }).to.throw('"aa" is not an valid value for cht. Valid values are: ["bvs","bhs","bvg","bhg","bvo","p","p3","pc","pd","ls","lc","lxy","ls:nda","lc:nda","lxy:nda"]')
-    );
+          </mjml>`).render();
+      }).to.throw(
+        '"aa" is not an valid value for cht. Valid values are: ["bvs","bhs","bvg","bhg","bvo","p","p3","pc","pd","ls","lc","lxy","ls:nda","lc:nda","lxy:nda"]'
+      ));
 
     it('should crash at compile time in case of bad attribute values', () =>
       expect(() => {
@@ -65,14 +59,16 @@ describe('mjml-chart', () => {
           chxt="x,y"
           chxl="0:|A|B|C" />
           </mj-body>
-          </mjml>`).render()
-      }).to.throw('"INVALID_CHD_VALUE" is an invalid value for chd. Examples: t:10,20,30|15,25,35')
-    );
+          </mjml>`).render();
+      }).to.throw(
+        '"INVALID_CHD_VALUE" is an invalid value for chd. Examples: t:10,20,30|15,25,35'
+      ));
   });
 
   describe('chart generation', () => {
     it('should render a mjml chart', () => {
-      expect(new MJMLRenderer(`
+      expect(
+        new MJMLRenderer(`
           <mjml>
             <mj-body>
               <mj-chart
@@ -82,11 +78,15 @@ describe('mjml-chart', () => {
               chxt="x,y"
               chxl="0:|A|B|C" />
             </mj-body>
-          </mjml>`).render().html).to.contain('<img height="auto" src="https://image-charts.com/chart?cht=bvs&chd=t%3A10%2C20%2C30%7C15%2C25%2C35&chs=300x200&chxt=x%2Cy&chxl=0%3A%7CA%7CB%7CC" style="border:none;border-radius:0px;display:block;outline:none;text-decoration:none;width:100%;height:auto;" width="300">')
-    })
+          </mjml>`).render().html
+      ).to.contain(
+        '<img height="auto" src="https://image-charts.com/chart?cht=bvs&chd=t%3A10%2C20%2C30%7C15%2C25%2C35&chs=300x200&chxt=x%2Cy&chxl=0%3A%7CA%7CB%7CC" style="border:none;border-radius:0px;display:block;font-size:13px;outline:none;text-decoration:none;width:100%;height:auto;" width="300">'
+      );
+    });
 
     it('should render mjml-image attributes', () => {
-      expect(new MJMLRenderer(`
+      expect(
+        new MJMLRenderer(`
           <mjml>
             <mj-body>
               <mj-chart
@@ -98,9 +98,12 @@ describe('mjml-chart', () => {
               chxt="x,y"
               chxl="0:|A|B|C" />
             </mj-body>
-          </mjml>`).render().html).to
-        .contain(`align="left"`)
-        .contain('<img alt="alt" height="auto" src="https://image-charts.com/chart?cht=bvg&chd=t%3A10%2C20%2C30%7C15%2C25%2C35&chs=300x200&chxt=x%2Cy&chxl=0%3A%7CA%7CB%7CC" style="border:none;border-radius:0px;display:block;outline:none;text-decoration:none;width:100%;height:auto;" width="300">')
-    })
-  })
-})
+          </mjml>`).render().html
+      )
+        .to.contain(`align="left"`)
+        .contain(
+          '<img alt="alt" height="auto" src="https://image-charts.com/chart?cht=bvg&chd=t%3A10%2C20%2C30%7C15%2C25%2C35&chs=300x200&chxt=x%2Cy&chxl=0%3A%7CA%7CB%7CC" style="border:none;border-radius:0px;display:block;font-size:13px;outline:none;text-decoration:none;width:100%;height:auto;" width="300">'
+        );
+    });
+  });
+});
