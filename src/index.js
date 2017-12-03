@@ -26,6 +26,7 @@ const defaultMJMLDefinition = {
     "cht": undefined,
     "chd": undefined,
     "chds": undefined,
+    "chxr": undefined,
     "chof": undefined,
     "chs": undefined,
     "chdl": undefined,
@@ -51,11 +52,13 @@ const defaultMJMLDefinition = {
     "border": "none",
     "border-radius": "0",
     "container-background-color": undefined,
+    "rel": undefined,
     "padding-bottom": undefined,
     "padding-left": undefined,
     "padding-right": undefined,
     "padding-top": undefined,
     "padding": "10px 25px",
+    "srcset": undefined,
     "title": undefined,
     "vertical-align": undefined
   }
@@ -100,6 +103,16 @@ const imageChartsParameters = [
     "examples": [
       "-80,140"
     ]
+  },
+  {
+    "name": "chxr",
+    "pattern": "/^(?:[0-9-.]+)(?:,(?:[0-9-.]+)){2,3}\\|?((?:[0-9-.]+)(?:,(?:[0-9-.]+)){2,3})?$/i",
+    "examples": [
+      "0,0,200",
+      "0,10,50,5",
+      "0,0,500|1,0,200"
+    ],
+    "required": false
   },
   {
     "name": "chof",
@@ -168,10 +181,11 @@ const imageChartsParameters = [
   },
   {
     "name": "chxt",
-    "pattern": "/([xy],)*[xy]/i",
+    "pattern": "/^(?:[xy])(,(?:[xy]))*$/i",
     "examples": [
       "y",
-      "x,y"
+      "x,y",
+      "x,x,y"
     ],
     "required": false
   },
