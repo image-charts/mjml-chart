@@ -1,6 +1,7 @@
 <a name="4.1.2"></a>
-## 4.1.2 (2017-12-12)
+## 4.1.2 (2017-12-13)
 
+* docs(changelog): updated ([d32a946](https://github.com/image-charts/mjml-chart/commit/d32a946))
 * docs(changelog): updated ([febf38b](https://github.com/image-charts/mjml-chart/commit/febf38b))
 * docs(changelog): updated ([17c8a29](https://github.com/image-charts/mjml-chart/commit/17c8a29))
 * docs(changelog): updated ([6585a6a](https://github.com/image-charts/mjml-chart/commit/6585a6a))
