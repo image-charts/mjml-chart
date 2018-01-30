@@ -1,8 +1,9 @@
 <a name="4.1.2"></a>
-## 4.1.2 (2018-01-29)
+## <small>4.1.2 (2018-01-30)</small>
 
 * docs(changelog): updated ([2186c27](https://github.com/image-charts/mjml-chart/commit/2186c27))
-* docs(changelog): updated ([f75d1ac](https://github.com/image-charts/mjml-chart/commit/f75d1ac))
+* docs(changelog): updated ([f553066](https://github.com/image-charts/mjml-chart/commit/f553066))
+* docs(changelog): updated ([03cfa17](https://github.com/image-charts/mjml-chart/commit/03cfa17))
 * docs(changelog): updated ([a6bf8c2](https://github.com/image-charts/mjml-chart/commit/a6bf8c2))
 * docs(changelog): updated ([f03f200](https://github.com/image-charts/mjml-chart/commit/f03f200))
 * docs(changelog): updated ([9a96bf3](https://github.com/image-charts/mjml-chart/commit/9a96bf3))
@@ -29,7 +30,7 @@
 * docs(changelog): updated ([b74d6b6](https://github.com/image-charts/mjml-chart/commit/b74d6b6))
 * docs(changelog): updated ([48d3d74](https://github.com/image-charts/mjml-chart/commit/48d3d74))
 * docs(changelog): updated ([d01bbdb](https://github.com/image-charts/mjml-chart/commit/d01bbdb))
-* docs(changelog): updated ([03cfa17](https://github.com/image-charts/mjml-chart/commit/03cfa17))
+* docs(changelog): updated ([f75d1ac](https://github.com/image-charts/mjml-chart/commit/f75d1ac))
 * docs(changelog): updated ([ab55027](https://github.com/image-charts/mjml-chart/commit/ab55027))
 * docs(changelog): updated ([6f012f8](https://github.com/image-charts/mjml-chart/commit/6f012f8))
 * docs(changelog): updated ([0fb3eca](https://github.com/image-charts/mjml-chart/commit/0fb3eca))
@@ -65,7 +66,7 @@
 
 
 <a name="4.1.3"></a>
-## 4.1.3 (2017-12-03)
+## <small>4.1.3 (2017-12-03)</small>
 
 * fix(gitignore) ([3778332](https://github.com/image-charts/mjml-chart/commit/3778332))
 * Release v4.1.3. ([4e921a4](https://github.com/image-charts/mjml-chart/commit/4e921a4))
@@ -74,7 +75,7 @@
 
 
 <a name="4.1.2"></a>
-## 4.1.2 (2017-12-03)
+## <small>4.1.2 (2017-12-03)</small>
 
 * fix(package) ([0ed2851](https://github.com/image-charts/mjml-chart/commit/0ed2851))
 * prepare for release ([4e4a5b8](https://github.com/image-charts/mjml-chart/commit/4e4a5b8))
@@ -85,7 +86,7 @@
 
 
 <a name="4.0.3"></a>
-## 4.0.3 (2017-05-13)
+## <small>4.0.3 (2017-05-13)</small>
 
 * fix(package) ([c83b6bc](https://github.com/image-charts/mjml-chart/commit/c83b6bc))
 * fix(package) ([6bef6cb](https://github.com/image-charts/mjml-chart/commit/6bef6cb))
@@ -99,7 +100,7 @@
 
 
 <a name="4.0.2"></a>
-## 4.0.2 (2017-04-19)
+## <small>4.0.2 (2017-04-19)</small>
 
 * . ([09d8dbd](https://github.com/image-charts/mjml-chart/commit/09d8dbd))
 * . ([426921d](https://github.com/image-charts/mjml-chart/commit/426921d))
@@ -131,7 +132,7 @@
 
 
 <a name="1.5.0"></a>
-# 1.5.0 (2017-03-30)
+## 1.5.0 (2017-03-30)
 
 * fix(tmpl) ([d3c5679](https://github.com/image-charts/mjml-chart/commit/d3c5679))
 * prepare for release ([3d833b1](https://github.com/image-charts/mjml-chart/commit/3d833b1))
@@ -144,14 +145,14 @@
 
 
 <a name="3.0.0"></a>
-# 3.0.0 (2016-10-31)
+## 3.0.0 (2016-10-31)
 
 * Release v3.0.0. ([800db7a](https://github.com/image-charts/mjml-chart/commit/800db7a))
 
 
 
 <a name="2.0.0"></a>
-# 2.0.0 (2016-10-31)
+## 2.0.0 (2016-10-31)
 
 * feat(readme) ([bac48ed](https://github.com/image-charts/mjml-chart/commit/bac48ed))
 * Release v2.0.0. ([51ac74f](https://github.com/image-charts/mjml-chart/commit/51ac74f))
