@@ -5,64 +5,17 @@
  */
 
 import {
-  MJMLElement
+  BodyComponent
 } from 'mjml-core'
 import Image from 'mjml-image'
+import widthParser from 'mjml-core/lib/helpers/widthParser'
 
-import React, {
-  Component
-} from 'react'
 import qs from 'querystring'
 import memoize from 'lodash/memoize'
 import min from 'lodash/min'
 import toNumber from 'lodash/toNumber'
 import includes from 'lodash/includes'
 
-const tagName = 'mj-chart'
-const parentTag = ['mj-column', 'mj-hero-content']
-const selfClosingTag = true
-const defaultMJMLDefinition = {
-  "attributes": {
-    "cht": undefined,
-    "chd": undefined,
-    "chds": undefined,
-    "chxr": undefined,
-    "chof": undefined,
-    "chs": undefined,
-    "chdl": undefined,
-    "chdls": undefined,
-    "chg": undefined,
-    "chco": undefined,
-    "chtt": undefined,
-    "chts": undefined,
-    "chxt": undefined,
-    "chxl": undefined,
-    "chm": undefined,
-    "chls": undefined,
-    "chl": undefined,
-    "chma": undefined,
-    "chf": undefined,
-    "chan": undefined,
-    "chli": undefined,
-    "icac": undefined,
-    "ichm": undefined,
-    "icwt": undefined,
-    "align": "center",
-    "alt": undefined,
-    "border": "none",
-    "border-radius": "0",
-    "container-background-color": undefined,
-    "rel": undefined,
-    "padding-bottom": undefined,
-    "padding-left": undefined,
-    "padding-right": undefined,
-    "padding-top": undefined,
-    "padding": "10px 25px",
-    "srcset": undefined,
-    "title": undefined,
-    "vertical-align": undefined
-  }
-}
 const imageChartsParameters = [
   {
     "name": "cht",
@@ -277,34 +230,18 @@ const imageChartsParameters = [
     ],
     "required": false
   }
-]
-
-const endingTag = true
-const baseStyles = {
-  table: {
-    borderCollapse: 'collapse',
-    borderSpacing: '0px'
-  },
-  img: {
-    border: 'none',
-    borderRadius: '',
-    display: 'block',
-    outline: 'none',
-    textDecoration: 'none',
-    width: '100%'
-  }
-}
+];
 
 const strToRegExp = memoize((regexp) => {
   const [__, pattern, flags] = /\/(.*)\/(.*)/.exec(regexp); // eslint-disable-line no-unused-vars
   return new RegExp(pattern, flags);
 })
 
-function buildURL (mjAttribute) {
+function buildURL (getAttribute) {
 
   function buildQuery () {
     return imageChartsParameters.reduce((query, attr) => {
-      const val = mjAttribute(attr.name);
+      const val = getAttribute(attr.name);
 
       if(attr.required && val === undefined){
         throw new Error(`${attr.name} is required. Examples values ${attr.examples.join(', ')}`);
@@ -330,46 +267,151 @@ function buildURL (mjAttribute) {
   return `https://image-charts.com/chart?${qs.stringify(buildQuery())}`;
 }
 
-@MJMLElement
-class Chart extends Component {
+class MjChart extends BodyComponent {
+  static tagOmission = true;
+  static endingTag = true;
+
+  static allowedAttributes = {
+  "cht": "string",
+  "chd": "string",
+  "chds": "string",
+  "chxr": "string",
+  "chof": "string",
+  "chs": "string",
+  "chdl": "string",
+  "chdls": "string",
+  "chg": "string",
+  "chco": "string",
+  "chtt": "string",
+  "chts": "string",
+  "chxt": "string",
+  "chxl": "string",
+  "chm": "string",
+  "chls": "string",
+  "chl": "string",
+  "chma": "string",
+  "chf": "string",
+  "chan": "string",
+  "chli": "string",
+  "icac": "string",
+  "ichm": "string",
+  "icwt": "string",
+  "alt": "string",
+  "srcset": "string",
+  "title": "string",
+  "align": "string",
+  "border": "string",
+  "border-bottom": "string",
+  "border-left": "string",
+  "border-right": "string",
+  "border-top": "string",
+  "border-radius": "string",
+  "container-background-color": "string",
+  "padding": "string",
+  "padding-bottom": "string",
+  "padding-left": "string",
+  "padding-right": "string",
+  "padding-top": "string"
+};
+
+  static defaultAttributes = {
+  "cht": "",
+  "chd": "",
+  "chds": "",
+  "chxr": "",
+  "chof": "",
+  "chs": "",
+  "chdl": "",
+  "chdls": "",
+  "chg": "",
+  "chco": "",
+  "chtt": "",
+  "chts": "",
+  "chxt": "",
+  "chxl": "",
+  "chm": "",
+  "chls": "",
+  "chl": "",
+  "chma": "",
+  "chf": "",
+  "chan": "",
+  "chli": "",
+  "icac": "",
+  "ichm": "",
+  "icwt": "",
+  "alt": "",
+  "srcset": "",
+  "title": "",
+  "align": "center",
+  "border": "0",
+  "border-bottom": "",
+  "border-left": "",
+  "border-right": "",
+  "border-top": "",
+  "border-radius": "",
+  "container-background-color": "",
+  "padding": "10px 25px",
+  "padding-bottom": "",
+  "padding-left": "",
+  "padding-right": "",
+  "padding-top": ""
+};
 
   getContentWidth (chsWidth) {
-    const { mjAttribute, getPadding } = this.props
-    const parentWidth = mjAttribute('parentWidth')
-
-    const width = min([parseInt(chsWidth), parseInt(parentWidth)])
-
-    const paddingRight = getPadding('right')
-    const paddingLeft = getPadding('left')
+    const parentWidth = this.getAttribute('parentWidth')
+    const width = min([parseFloat(chsWidth), parseFloat(parentWidth)])
     return width;
   }
 
+  getStyles() {
+    const [_width, height] = this.getAttribute('chs').split('x').map(toNumber)
+    const width = this.getContentWidth(_width);
+    const fullWidth = this.getAttribute('full-width') === 'full-width'
+
+    const { parsedWidth, unit } = widthParser(width)
+
+    return {
+      table: {
+        'min-width': fullWidth ? '100%' : null,
+        'max-width': fullWidth ? '100%' : null,
+        width: fullWidth ? `${parsedWidth}${unit}` : null,
+        'border-collapse': 'collapse',
+        'border-spacing': '0px',
+      },
+      td: {
+        width: fullWidth ? null : `${parsedWidth}${unit}`,
+      },
+      img: {
+        border: this.getAttribute('border'),
+        borderRadius: '',
+        display: 'block',
+        outline: 'none',
+        textDecoration: 'none',
+        'min-width': fullWidth ? '100%' : null,
+        width: fullWidth ? `${parsedWidth}${unit}` : '100%',
+        'max-width': fullWidth ? '100%' : null,
+      }
+    }
+  }
+
   render () {
-    const {
-      mjAttribute
-    } = this.props
 
-    const [width, height] = mjAttribute('chs').split('x').map(toNumber)
+    const [width, height] = this.getAttribute('chs').split('x').map(toNumber)
 
-    return (<Image
-      width={this.getContentWidth(width)}
-      src={buildURL(mjAttribute)}
-      padding={mjAttribute('padding')}
-      align={mjAttribute('align')}
-      alt={mjAttribute('alt')}
-      border={mjAttribute('border')}
-      border-radius={mjAttribute('border-radius')}
-      title={mjAttribute('title')}
-    />);
+    return `<image
+      ${this.htmlAttributes({
+        'width': this.getContentWidth(width),
+        'src': buildURL(this.getAttribute.bind(this)),
+        'padding': this.getAttribute('padding'),
+        'align': this.getAttribute('align'),
+        'alt': this.getAttribute('alt'),
+        'border': this.getAttribute('border'),
+        'border-radius': this.getAttribute('border-radius'),
+        'title': this.getAttribute('title')
+       })}
+    />`;
   }
 }
 
-Chart.tagName = tagName
-Chart.parentTag = parentTag
-Chart.endingTag = endingTag
-Chart.selfClosingTag = selfClosingTag
-Chart.defaultMJMLDefinition = defaultMJMLDefinition
-Chart.baseStyles = baseStyles
-
-export default Chart
+export default MjChart
 

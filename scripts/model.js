@@ -6,12 +6,41 @@ const EXCLUDE_IMAGE_ATTRIBUTES = [
   'src', 'width', 'height',
   // currently not supported mjml-image attributes:
   'href', 'target'];
+
+/*
+{ [Function: MjImage]
+  tagOmission: true,
+  allowedAttributes:
+   { alt: 'string',
+     href: 'string',
+     src: 'string',
+     srcset: 'string',
+     title: 'string',
+     align: 'enum(left,center,right)',
+     border: 'string',
+     'border-bottom': 'string',
+     'border-left': 'string',
+     'border-right': 'string',
+     'border-top': 'string',
+     'border-radius': 'unit(px,%)',
+     'container-background-color': 'string',
+     padding: 'unit(px,%){1,4}',
+     'padding-bottom': 'unit(px,%)',
+     'padding-left': 'unit(px,%)',
+     'padding-right': 'unit(px,%)',
+     'padding-top': 'unit(px,%)',
+     height: 'unit(px)',
+     width: 'unit(px)' },
+  defaultAttributes:
+   { align: 'center',
+     border: '0',
+     height: 'auto',
+     padding: '10px 25px',
+     target: '_blank' } }
+ */
 const {
-  default: {
-    defaultMJMLDefinition: {
-      attributes: imageRawAttributes
-    }
-  }
+  allowedAttributes: imageRawAttributes,
+  defaultAttributes:defaultAttributes
 } = require('mjml-image');
 const {
   imageCharts: {
@@ -42,7 +71,7 @@ const imageAttributes = _.chain(imageRawAttributes)
   .map(([attribute, defaultValue]) => ({
     name: attribute,
     link: '#mjml-image',
-    defaultValue: defaultValue
+    defaultValue: defaultAttributes[attribute]
   }))
   .value();
 
