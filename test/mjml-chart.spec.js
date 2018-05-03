@@ -7,12 +7,13 @@
  *
  */
 import { expect } from 'chai';
-import { MJMLRenderer, registerMJElement } from 'mjml-core';
+import MJMLRenderer from 'mjml-validator' 
+import { registerComponent } from 'mjml-core';
 import ChartComponent from '../src';
 
 describe('mjml-chart', () => {
   before(() => {
-    registerMJElement(ChartComponent);
+    registerComponent(ChartComponent);
   });
 
   describe('compile-time error handling', () => {
