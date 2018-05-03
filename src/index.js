@@ -5,7 +5,7 @@
  */
 
 import {
-  MJMLElement
+  BodyComponent
 } from 'mjml-core'
 import Image from 'mjml-image'
 
@@ -330,8 +330,7 @@ function buildURL (mjAttribute) {
   return `https://image-charts.com/chart?${qs.stringify(buildQuery())}`;
 }
 
-@MJMLElement
-class Chart extends Component {
+class Chart extends BodyComponent {
 
   getContentWidth (chsWidth) {
     const { mjAttribute, getPadding } = this.props
