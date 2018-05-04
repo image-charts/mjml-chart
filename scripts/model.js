@@ -39,7 +39,7 @@ const EXCLUDE_IMAGE_ATTRIBUTES = [
      target: '_blank' } }
  */
 const {
-  allowedAttributes: imageRawAttributes,
+  allowedAttributes: allowedAttributes,
   defaultAttributes:defaultAttributes
 } = require('mjml-image');
 const {
@@ -65,7 +65,7 @@ const chartAttributes = swagger.paths['/chart'].get.parameters
     required: parameter.required
   }));
 
-const imageAttributes = _.chain(imageRawAttributes)
+const imageAttributes = _.chain(allowedAttributes)
   .toPairs()
   .filter(([attribute]) => !EXCLUDE_IMAGE_ATTRIBUTES.includes(attribute))
   .map(([attribute, defaultValue]) => ({

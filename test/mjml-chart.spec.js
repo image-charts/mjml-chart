@@ -7,34 +7,19 @@
  *
  */
 import { expect } from 'chai';
-import  { registerDependencies } from 'mjml-validator'
-import mjml2html, {registerComponent, components } from 'mjml-core';
+import mjml2html from 'mjml';
+import {registerComponent, components } from 'mjml-core';
 import ChartComponent from '../src';
 
 
 describe('mjml-chart', () => {
   before(() => {
     registerComponent(ChartComponent);
-    console.log(mjml2html, components);
   });
 
   describe('compile-time error handling', () => {
-    it.only('ok', () => {
-      console.log(mjml2html(`
-        <mjml>
-          <mj-body>
-            <chart
-            chs="300x200"
-            chd="t:10,20,30|15,25,35"
-            cht="bvs"
-            chxt="x,y"
-            chxl="0:|A|B|C" />
-          </mj-body>
-        </mjml>`));
-    })
-
     it('should crash at compile time in case of missing (cht) required attributes', () =>
-      expect(
+      expect(() =>
         mjml2html(`
           <mjml>
           <mj-body>
@@ -48,7 +33,7 @@ describe('mjml-chart', () => {
       ).to.throw('cht is required'));
 
     it('should crash at compile time in case of bad formatted attributes', () =>
-      expect(mjml2html(`
+      expect(() => mjml2html(`
           <mjml>
           <mj-body>
           <mj-chart
@@ -96,7 +81,7 @@ describe('mjml-chart', () => {
             </mj-body>
           </mjml>`).html
       ).to.contain(
-        '<img height="auto" src="https://image-charts.com/chart?cht=bvs&chd=t%3A10%2C20%2C30%7C15%2C25%2C35&chs=300x200&chxt=x%2Cy&chxl=0%3A%7CA%7CB%7CC" style="border:none;border-radius:0px;display:block;font-size:13px;outline:none;text-decoration:none;width:100%;height:auto;" width="300">'
+        '<img\n         height="auto" src="https://image-charts.com/chart?cht=bvs&chd=t%3A10%2C20%2C30%7C15%2C25%2C35&chs=300x200&chxt=x%2Cy&chxl=0%3A%7CA%7CB%7CC" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;" width="300"\n      />'
       );
     });
 
@@ -118,7 +103,7 @@ describe('mjml-chart', () => {
       )
         .to.contain(`align="left"`)
         .contain(
-          '<img alt="alt" height="auto" src="https://image-charts.com/chart?cht=bvg&chd=t%3A10%2C20%2C30%7C15%2C25%2C35&chs=300x200&chxt=x%2Cy&chxl=0%3A%7CA%7CB%7CC" style="border:none;border-radius:0px;display:block;font-size:13px;outline:none;text-decoration:none;width:100%;height:auto;" width="300">'
+          '<img\n         alt="alt" height="auto" src="https://image-charts.com/chart?cht=bvg&chd=t%3A10%2C20%2C30%7C15%2C25%2C35&chs=300x200&chxt=x%2Cy&chxl=0%3A%7CA%7CB%7CC" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;" width="300"\n      />'
         );
     });
   });
