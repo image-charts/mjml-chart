@@ -5,64 +5,27 @@
  */
 
 import {
-  MJMLElement
+  BodyComponent
 } from 'mjml-core'
+import { registerDependencies } from 'mjml-validator'
 import Image from 'mjml-image'
+import widthParser from 'mjml-core/lib/helpers/widthParser'
 
-import React, {
-  Component
-} from 'react'
 import qs from 'querystring'
 import memoize from 'lodash/memoize'
 import min from 'lodash/min'
 import toNumber from 'lodash/toNumber'
 import includes from 'lodash/includes'
 
-const tagName = 'mj-chart'
-const parentTag = ['mj-column', 'mj-hero-content']
-const selfClosingTag = true
-const defaultMJMLDefinition = {
-  "attributes": {
-    "cht": undefined,
-    "chd": undefined,
-    "chds": undefined,
-    "chxr": undefined,
-    "chof": undefined,
-    "chs": undefined,
-    "chdl": undefined,
-    "chdls": undefined,
-    "chg": undefined,
-    "chco": undefined,
-    "chtt": undefined,
-    "chts": undefined,
-    "chxt": undefined,
-    "chxl": undefined,
-    "chm": undefined,
-    "chls": undefined,
-    "chl": undefined,
-    "chma": undefined,
-    "chf": undefined,
-    "chan": undefined,
-    "chli": undefined,
-    "icac": undefined,
-    "ichm": undefined,
-    "icwt": undefined,
-    "align": "center",
-    "alt": undefined,
-    "border": "none",
-    "border-radius": "0",
-    "container-background-color": undefined,
-    "rel": undefined,
-    "padding-bottom": undefined,
-    "padding-left": undefined,
-    "padding-right": undefined,
-    "padding-top": undefined,
-    "padding": "10px 25px",
-    "srcset": undefined,
-    "title": undefined,
-    "vertical-align": undefined
-  }
-}
+registerDependencies({
+  // Tell the validator which tags are allowed as our component's parent
+  'mj-hero': ['mj-chart'],
+  'mj-column': ['mj-chart'],
+  'mj-body': ['mj-chart'],
+  // Tell the validator which tags are allowed as our component's children
+  'mj-chart': []
+})
+
 const imageChartsParameters = [
   {
     "name": "cht",
@@ -131,7 +94,7 @@ const imageChartsParameters = [
   },
   {
     "name": "chdl",
-    "pattern": "/^(?:[a-z0-9+\\s\\u00C0-\\u017F_!()&-°.]*\\|?)+$/i",
+    "pattern": "/^(?:[a-z0-9+\\s\\u00C0-\\u017F_!()&-°$€Ÿ₹.]*\\|?)+$/i",
     "examples": [
       "NASDAQ|FTSE100|DOW"
     ],
@@ -277,34 +240,18 @@ const imageChartsParameters = [
     ],
     "required": false
   }
-]
-
-const endingTag = true
-const baseStyles = {
-  table: {
-    borderCollapse: 'collapse',
-    borderSpacing: '0px'
-  },
-  img: {
-    border: 'none',
-    borderRadius: '',
-    display: 'block',
-    outline: 'none',
-    textDecoration: 'none',
-    width: '100%'
-  }
-}
+];
 
 const strToRegExp = memoize((regexp) => {
   const [__, pattern, flags] = /\/(.*)\/(.*)/.exec(regexp); // eslint-disable-line no-unused-vars
   return new RegExp(pattern, flags);
 })
 
-function buildURL (mjAttribute) {
+function buildURL (getAttribute) {
 
   function buildQuery () {
     return imageChartsParameters.reduce((query, attr) => {
-      const val = mjAttribute(attr.name);
+      const val = getAttribute(attr.name);
 
       if(attr.required && val === undefined){
         throw new Error(`${attr.name} is required. Examples values ${attr.examples.join(', ')}`);
@@ -330,46 +277,149 @@ function buildURL (mjAttribute) {
   return `https://image-charts.com/chart?${qs.stringify(buildQuery())}`;
 }
 
-@MJMLElement
-class Chart extends Component {
+export default class MjChart extends BodyComponent {
+  // Tell the parser that our component won't contain other mjml tags
+  static endingTag = true
 
-  getContentWidth (chsWidth) {
-    const { mjAttribute, getPadding } = this.props
-    const parentWidth = mjAttribute('parentWidth')
+  // Tells the validator which attributes are allowed for mj-chart
+  static allowedAttributes = {
+  "cht": "string",
+  "chd": "string",
+  "chds": "string",
+  "chxr": "string",
+  "chof": "string",
+  "chs": "string",
+  "chdl": "string",
+  "chdls": "string",
+  "chg": "string",
+  "chco": "string",
+  "chtt": "string",
+  "chts": "string",
+  "chxt": "string",
+  "chxl": "string",
+  "chm": "string",
+  "chls": "string",
+  "chl": "string",
+  "chma": "string",
+  "chf": "string",
+  "chan": "string",
+  "chli": "string",
+  "icac": "string",
+  "ichm": "string",
+  "icwt": "string",
+  "alt": "string",
+  "srcset": "string",
+  "title": "string",
+  "align": "string",
+  "border": "string",
+  "border-bottom": "string",
+  "border-left": "string",
+  "border-right": "string",
+  "border-top": "string",
+  "border-radius": "string",
+  "container-background-color": "string",
+  "padding": "string",
+  "padding-bottom": "string",
+  "padding-left": "string",
+  "padding-right": "string",
+  "padding-top": "string"
+};
 
-    const width = min([parseInt(chsWidth), parseInt(parentWidth)])
+  // What the name suggests. Fallback value for this.getAttribute('attribute-name').
+  static defaultAttributes = {
+  "align": "center",
+  "border": "0",
+  "padding": "10px 25px"
+};
 
-    const paddingRight = getPadding('right')
-    const paddingLeft = getPadding('left')
-    return width;
+  // Tells the validator which attributes are allowed for mj-chart
+  static imageAttributes = [
+  {
+    "name": "alt",
+    "link": "#mjml-image"
+  },
+  {
+    "name": "srcset",
+    "link": "#mjml-image"
+  },
+  {
+    "name": "title",
+    "link": "#mjml-image"
+  },
+  {
+    "name": "align",
+    "link": "#mjml-image",
+    "defaultValue": "center"
+  },
+  {
+    "name": "border",
+    "link": "#mjml-image",
+    "defaultValue": "0"
+  },
+  {
+    "name": "border-bottom",
+    "link": "#mjml-image"
+  },
+  {
+    "name": "border-left",
+    "link": "#mjml-image"
+  },
+  {
+    "name": "border-right",
+    "link": "#mjml-image"
+  },
+  {
+    "name": "border-top",
+    "link": "#mjml-image"
+  },
+  {
+    "name": "border-radius",
+    "link": "#mjml-image"
+  },
+  {
+    "name": "container-background-color",
+    "link": "#mjml-image"
+  },
+  {
+    "name": "padding",
+    "link": "#mjml-image",
+    "defaultValue": "10px 25px"
+  },
+  {
+    "name": "padding-bottom",
+    "link": "#mjml-image"
+  },
+  {
+    "name": "padding-left",
+    "link": "#mjml-image"
+  },
+  {
+    "name": "padding-right",
+    "link": "#mjml-image"
+  },
+  {
+    "name": "padding-top",
+    "link": "#mjml-image"
   }
+];
 
+  /*
+    Render is the only required function in a component.
+    It must return an html string.
+  */
   render () {
-    const {
-      mjAttribute
-    } = this.props
+    const getAttribute = this.getAttribute.bind(this);
+    const [width, height] = getAttribute('chs').split('x').map(toNumber);
 
-    const [width, height] = mjAttribute('chs').split('x').map(toNumber)
+    const attributes = MjChart.imageAttributes.reduce((attrs, {name}) => {
+      attrs[name] = getAttribute(name);
+      return attrs;
+    }, {
+      src: buildURL(getAttribute),
+      width: `${width}px`
+    });
 
-    return (<Image
-      width={this.getContentWidth(width)}
-      src={buildURL(mjAttribute)}
-      padding={mjAttribute('padding')}
-      align={mjAttribute('align')}
-      alt={mjAttribute('alt')}
-      border={mjAttribute('border')}
-      border-radius={mjAttribute('border-radius')}
-      title={mjAttribute('title')}
-    />);
+    return this.renderMJML(`<mj-image ${this.htmlAttributes(attributes)} />`);
   }
 }
-
-Chart.tagName = tagName
-Chart.parentTag = parentTag
-Chart.endingTag = endingTag
-Chart.selfClosingTag = selfClosingTag
-Chart.defaultMJMLDefinition = defaultMJMLDefinition
-Chart.baseStyles = baseStyles
-
-export default Chart
 

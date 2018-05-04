@@ -9,13 +9,22 @@ const pick = require('lodash/pick');
 
 const COMPONENT_IN = fs.readFileSync(path.resolve(__dirname, 'templates/component.js.tmpl'), 'utf8');
 
-const defaultMJMLDefinition = chartAttributes.concat(imageAttributes).reduce((attribute, {name, defaultValue}) => {
-  attribute[name] = defaultValue || null;
+const allowedAttributes = chartAttributes.concat(imageAttributes).reduce((attribute, {name}) => {
+  attribute[name] = 'string';
   return attribute;
 }, {});
 
+const defaultAttributes = chartAttributes.concat(imageAttributes).reduce((defaultAttributes, {name, defaultValue}) => {
+  if(defaultValue){
+    defaultAttributes[name] = defaultValue;
+  }
+  return defaultAttributes;
+}, {});
+
 const COMPONENT_OUT = COMPONENT_IN
-  .replace('/*defaultMJMLDefinition*/', JSON.stringify({attributes:defaultMJMLDefinition}, null, 2).replace(/null/g, 'undefined'))
+  .replace('/*imageAttributes*/', JSON.stringify(imageAttributes, null, 2).replace(/null/g, 'undefined'))
+  .replace('/*allowedAttributes*/', JSON.stringify(allowedAttributes, null, 2).replace(/null/g, 'undefined'))
+  .replace('/*defaultAttributes*/', JSON.stringify(defaultAttributes, null, 2).replace(/null/g, 'undefined'))
   .replace('/*imageChartsParameters*/', JSON.stringify(chartAttributes.map((attribute) => pick(attribute, ['name', 'pattern', 'examples', 'required', 'enum'])), null, 2))
   .replace('/*documentation_url*/', API_ENDPOINT);
 

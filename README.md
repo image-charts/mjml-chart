@@ -68,20 +68,22 @@ Since `mjml-chart` is a wrapper for `mjml-image`, `mjml-image` attributes are al
 
 | attribute                                 | default values |
 | ----------------------------------------- | -------------- |
-| [align](#mjml-image)                      | center         |
 | [alt](#mjml-image)                        | n/a            |
-| [border](#mjml-image)                     | none           |
-| [border-radius](#mjml-image)              | 0              |
+| [srcset](#mjml-image)                     | n/a            |
+| [title](#mjml-image)                      | n/a            |
+| [align](#mjml-image)                      | center         |
+| [border](#mjml-image)                     | 0              |
+| [border-bottom](#mjml-image)              | n/a            |
+| [border-left](#mjml-image)                | n/a            |
+| [border-right](#mjml-image)               | n/a            |
+| [border-top](#mjml-image)                 | n/a            |
+| [border-radius](#mjml-image)              | n/a            |
 | [container-background-color](#mjml-image) | n/a            |
-| [rel](#mjml-image)                        | n/a            |
+| [padding](#mjml-image)                    | 10px 25px      |
 | [padding-bottom](#mjml-image)             | n/a            |
 | [padding-left](#mjml-image)               | n/a            |
 | [padding-right](#mjml-image)              | n/a            |
 | [padding-top](#mjml-image)                | n/a            |
-| [padding](#mjml-image)                    | 10px 25px      |
-| [srcset](#mjml-image)                     | n/a            |
-| [title](#mjml-image)                      | n/a            |
-| [vertical-align](#mjml-image)             | n/a            |
 
 
 Note:

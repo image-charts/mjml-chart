@@ -5,51 +5,39 @@
  */
 
 import {
-  MJMLElement
+  BodyComponent
 } from 'mjml-core'
+import { registerDependencies } from 'mjml-validator'
 import Image from 'mjml-image'
+import widthParser from 'mjml-core/lib/helpers/widthParser'
 
-import React, {
-  Component
-} from 'react'
 import qs from 'querystring'
 import memoize from 'lodash/memoize'
 import min from 'lodash/min'
 import toNumber from 'lodash/toNumber'
 import includes from 'lodash/includes'
 
-const tagName = 'mj-chart'
-const parentTag = ['mj-column', 'mj-hero-content']
-const selfClosingTag = true
-const defaultMJMLDefinition = /*defaultMJMLDefinition*/
-const imageChartsParameters = /*imageChartsParameters*/
+registerDependencies({
+  // Tell the validator which tags are allowed as our component's parent
+  'mj-hero': ['mj-chart'],
+  'mj-column': ['mj-chart'],
+  'mj-body': ['mj-chart'],
+  // Tell the validator which tags are allowed as our component's children
+  'mj-chart': []
+})
 
-const endingTag = true
-const baseStyles = {
-  table: {
-    borderCollapse: 'collapse',
-    borderSpacing: '0px'
-  },
-  img: {
-    border: 'none',
-    borderRadius: '',
-    display: 'block',
-    outline: 'none',
-    textDecoration: 'none',
-    width: '100%'
-  }
-}
+const imageChartsParameters = /*imageChartsParameters*/;
 
 const strToRegExp = memoize((regexp) => {
   const [__, pattern, flags] = /\/(.*)\/(.*)/.exec(regexp); // eslint-disable-line no-unused-vars
   return new RegExp(pattern, flags);
 })
 
-function buildURL (mjAttribute) {
+function buildURL (getAttribute) {
 
   function buildQuery () {
     return imageChartsParameters.reduce((query, attr) => {
-      const val = mjAttribute(attr.name);
+      const val = getAttribute(attr.name);
 
       if(attr.required && val === undefined){
         throw new Error(`${attr.name} is required. Examples values ${attr.examples.join(', ')}`);
@@ -75,45 +63,35 @@ function buildURL (mjAttribute) {
   return `/*documentation_url*/?${qs.stringify(buildQuery())}`;
 }
 
-@MJMLElement
-class Chart extends Component {
+export default class MjChart extends BodyComponent {
+  // Tell the parser that our component won't contain other mjml tags
+  static endingTag = true
 
-  getContentWidth (chsWidth) {
-    const { mjAttribute, getPadding } = this.props
-    const parentWidth = mjAttribute('parentWidth')
+  // Tells the validator which attributes are allowed for mj-chart
+  static allowedAttributes = /*allowedAttributes*/;
 
-    const width = min([parseInt(chsWidth), parseInt(parentWidth)])
+  // What the name suggests. Fallback value for this.getAttribute('attribute-name').
+  static defaultAttributes = /*defaultAttributes*/;
 
-    const paddingRight = getPadding('right')
-    const paddingLeft = getPadding('left')
-    return width;
-  }
+  // Tells the validator which attributes are allowed for mj-chart
+  static imageAttributes = /*imageAttributes*/;
 
+  /*
+    Render is the only required function in a component.
+    It must return an html string.
+  */
   render () {
-    const {
-      mjAttribute
-    } = this.props
+    const getAttribute = this.getAttribute.bind(this);
+    const [width, height] = getAttribute('chs').split('x').map(toNumber);
 
-    const [width, height] = mjAttribute('chs').split('x').map(toNumber)
+    const attributes = MjChart.imageAttributes.reduce((attrs, {name}) => {
+      attrs[name] = getAttribute(name);
+      return attrs;
+    }, {
+      src: buildURL(getAttribute),
+      width: `${width}px`
+    });
 
-    return (<Image
-      width={this.getContentWidth(width)}
-      src={buildURL(mjAttribute)}
-      padding={mjAttribute('padding')}
-      align={mjAttribute('align')}
-      alt={mjAttribute('alt')}
-      border={mjAttribute('border')}
-      border-radius={mjAttribute('border-radius')}
-      title={mjAttribute('title')}
-    />);
+    return this.renderMJML(`<mj-image ${this.htmlAttributes(attributes)} />`);
   }
 }
-
-Chart.tagName = tagName
-Chart.parentTag = parentTag
-Chart.endingTag = endingTag
-Chart.selfClosingTag = selfClosingTag
-Chart.defaultMJMLDefinition = defaultMJMLDefinition
-Chart.baseStyles = baseStyles
-
-export default Chart
