@@ -7,14 +7,15 @@
  *
  */
 import { expect } from 'chai';
-import { registerDependencies } from 'mjml-validator'
-import mjml2html, {registerComponent } from 'mjml-core';
+import  { registerDependencies } from 'mjml-validator'
+import mjml2html, {registerComponent, components } from 'mjml-core';
 import ChartComponent from '../src';
 
 
 describe('mjml-chart', () => {
   before(() => {
     registerComponent(ChartComponent);
+    console.log(mjml2html, components);
   });
 
   describe('compile-time error handling', () => {
@@ -22,7 +23,7 @@ describe('mjml-chart', () => {
       console.log(mjml2html(`
         <mjml>
           <mj-body>
-            <mj-chart
+            <chart
             chs="300x200"
             chd="t:10,20,30|15,25,35"
             cht="bvs"

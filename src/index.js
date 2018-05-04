@@ -267,7 +267,7 @@ function buildURL (getAttribute) {
   return `https://image-charts.com/chart?${qs.stringify(buildQuery())}`;
 }
 
-class MjChart extends BodyComponent {
+class Chart extends BodyComponent {
   static tagOmission = true;
   static endingTag = true;
 
@@ -413,5 +413,5 @@ class MjChart extends BodyComponent {
   }
 }
 
-export default MjChart
+export default Chart
 
