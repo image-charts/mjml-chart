@@ -94,7 +94,7 @@ const imageChartsParameters = [
   },
   {
     "name": "chdl",
-    "pattern": "/^(?:[a-z0-9+\\s\\u00C0-\\u017F_!()&-°.]*\\|?)+$/i",
+    "pattern": "/^(?:[a-z0-9+\\s\\u00C0-\\u017F_!()&-°$€Ÿ₹.]*\\|?)+$/i",
     "examples": [
       "NASDAQ|FTSE100|DOW"
     ],
