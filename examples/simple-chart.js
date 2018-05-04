@@ -1,5 +1,8 @@
-import { mjml2html, registerMJElement } from 'mjml'
 import path from 'path'
+
+import mjml2html from 'mjml';
+import {registerComponent, components } from 'mjml-core';
+import ChartComponent from '../src';
 
 // First require mjml-chart:
 // import mjmlchart from 'mjml-chart'
@@ -7,7 +10,7 @@ import path from 'path'
 import mjmlchart from '../'
 
 // Then register mjml-chart
-registerMJElement(mjmlchart);
+registerComponent(mjmlchart);
 
 
 /*

@@ -4,3 +4,4 @@ node_modules/
 home/
 .nyc_output/
 .env
+examples/*.html

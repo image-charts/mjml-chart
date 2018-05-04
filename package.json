@@ -12,7 +12,7 @@
     "coverage-send": "cat ./coverage/lcov.info | coveralls",
     "generate-swagger": "curl -s https://image-charts.com/swagger.json > scripts/swagger.json",
     "generate-swagger-dev": "curl -s http://localhost:8080/swagger.json > scripts/swagger.json",
-    "example-html": "babel-node examples/simple-chart.js",
+    "example-html": "babel-node examples/simple-chart.js > examples/simple-chart.html && open examples/simple-chart.html",
     "generate": "node scripts/generateREADME.js > README.md && node scripts/generateComponent.js > src/index.js && babel src/index.js > lib/index.js",
     "generate-watch": "chokidar 'scripts/**' 'package.json' -c 'npm run generate'",
     "updtr": "updtr",
