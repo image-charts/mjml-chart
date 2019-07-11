@@ -45,7 +45,7 @@
   },
   "homepage": "https://github.com/image-charts/mjml-chart",
   "dependencies": {
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.12",
     "mjml-core": "4.*",
     "mjml-image": "4.*"
   },
