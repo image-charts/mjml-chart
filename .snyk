@@ -1,0 +1,11 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:extend:20180424':
+    - mjml-core > mjml-migrate > mjml-core > juice > web-resource-inliner > request > extend:
+        patched: '2019-09-30T05:09:30.569Z'
+  'npm:stringstream:20180511':
+    - mjml-core > mjml-migrate > mjml-core > juice > web-resource-inliner > request > stringstream:
+        patched: '2019-09-30T05:09:30.569Z'
