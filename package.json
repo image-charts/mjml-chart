@@ -19,7 +19,9 @@
     "updtr-commit": "npm run --silent updtr && (git add package.json && git commit -m 'update deps' || true)",
     "changelog": "git checkout master && conventional-changelog -i CHANGELOG.md -s -r 0",
     "changelog-commit": "npm run --silent changelog && (git add CHANGELOG.md && git commit -m 'docs(changelog): updated' || true)",
-    "git-push": "git push origin master:master"
+    "git-push": "git push origin master:master",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -47,7 +49,8 @@
   "dependencies": {
     "lodash": "^4.17.10",
     "mjml-core": "4.*",
-    "mjml-image": "4.*"
+    "mjml-image": "4.*",
+    "snyk": "^1.298.0"
   },
   "devDependencies": {
     "babel": "^6.23.0",
@@ -72,5 +75,6 @@
     "nyc": "^11.7.1",
     "truncate": "^2.0.1",
     "updtr": "2.0.0"
-  }
+  },
+  "snyk": true
 }
