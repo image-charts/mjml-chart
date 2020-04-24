@@ -13,9 +13,10 @@ import ChartComponent from '../src';
 
 const mjmlConvert = (mjml) => {
   const conversion = mjml2html(mjml)
+  const errors = conversion.errors
 
-  if (conversion.errors.length > 0) {
-    return conversion.errors
+  if (errors.length > 0) {
+    return errors
   }
 
   return conversion.html
