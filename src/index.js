@@ -21,7 +21,6 @@ registerDependencies({
   // Tell the validator which tags are allowed as our component's parent
   'mj-hero': ['mj-chart'],
   'mj-column': ['mj-chart'],
-  'mj-body': ['mj-chart'],
   // Tell the validator which tags are allowed as our component's children
   'mj-chart': []
 })
@@ -308,8 +307,10 @@ export default class MjChart extends BodyComponent {
   "ichm": "string",
   "icwt": "string",
   "alt": "string",
+  "name": "string",
   "srcset": "string",
   "title": "string",
+  "rel": "string",
   "align": "string",
   "border": "string",
   "border-bottom": "string",
@@ -318,18 +319,23 @@ export default class MjChart extends BodyComponent {
   "border-top": "string",
   "border-radius": "string",
   "container-background-color": "string",
+  "fluid-on-mobile": "string",
   "padding": "string",
   "padding-bottom": "string",
   "padding-left": "string",
   "padding-right": "string",
-  "padding-top": "string"
+  "padding-top": "string",
+  "max-height": "string",
+  "font-size": "string",
+  "usemap": "string"
 };
 
   // What the name suggests. Fallback value for this.getAttribute('attribute-name').
   static defaultAttributes = {
   "align": "center",
   "border": "0",
-  "padding": "10px 25px"
+  "padding": "10px 25px",
+  "font-size": "13px"
 };
 
   // Tells the validator which attributes are allowed for mj-chart
@@ -339,11 +345,19 @@ export default class MjChart extends BodyComponent {
     "link": "#mjml-image"
   },
   {
+    "name": "name",
+    "link": "#mjml-image"
+  },
+  {
     "name": "srcset",
     "link": "#mjml-image"
   },
   {
     "name": "title",
+    "link": "#mjml-image"
+  },
+  {
+    "name": "rel",
     "link": "#mjml-image"
   },
   {
@@ -381,6 +395,10 @@ export default class MjChart extends BodyComponent {
     "link": "#mjml-image"
   },
   {
+    "name": "fluid-on-mobile",
+    "link": "#mjml-image"
+  },
+  {
     "name": "padding",
     "link": "#mjml-image",
     "defaultValue": "10px 25px"
@@ -399,6 +417,19 @@ export default class MjChart extends BodyComponent {
   },
   {
     "name": "padding-top",
+    "link": "#mjml-image"
+  },
+  {
+    "name": "max-height",
+    "link": "#mjml-image"
+  },
+  {
+    "name": "font-size",
+    "link": "#mjml-image",
+    "defaultValue": "13px"
+  },
+  {
+    "name": "usemap",
     "link": "#mjml-image"
   }
 ];
