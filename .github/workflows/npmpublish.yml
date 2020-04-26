@@ -4,6 +4,9 @@
 name: mjml-chart
 
 on:
+  schedule:
+    # Every week at 00:00 on Sunday
+    - cron:  '0 0 * * 0'
   push:
     branches:
       - master
