@@ -55,7 +55,7 @@ describe('mjml-chart', () => {
           </mj-body>
         </mjml>`)
       ).to.throw(
-        '"aa" is not an valid value for cht. Valid values are: ["bvs","bhs","bvg","bhg","bvo","p","p3","pc","pd","ls","lc","lxy","ls:nda","lc:nda","lxy:nda"]'
+        '"aa" is not an valid value for cht. Valid values are: ["bvs","bvg","bhs","bhg","bvo","p","p3","pc","pd","ls","lc","lxy","ls:nda","lc:nda","lxy:nda","pa","bb","gv","gv:dot","gv:neato","gv:circo","gv:fdp","gv:osage","gv:twopi","qr","r"]'
       ));
 
     it('should crash at compile time in case of bad attribute values', () =>
@@ -71,7 +71,7 @@ describe('mjml-chart', () => {
           </mj-body>
         </mjml>`)
       ).to.throw(
-        '"INVALID_CHD_VALUE" is an invalid value for chd. Examples: t:10,20,30|15,25,35'
+        '"INVALID_CHD_VALUE" is an invalid value for chd. Examples: a:-100,200.5,75.55,110, t:10,20,30|15,25,35, s:BTb19_,Mn5tzb, e:BaPoqM2s,-A__RMD6'
       ));
   });
 
@@ -133,8 +133,8 @@ describe('mjml-chart', () => {
                   chs="400x300"
                   chd="s:FOE,elo"
                   cht="bhs"
-                  chxt="y,y,x,x"
                   chxl="0:|Dec|Nov|Oct|Juin|Mai|Avril|Mars|Fev|Jan|1:|Dec|Nov|Oct|Juin|Mai|Avril|Mars|Fev|Jan|2:|Dec|Nov|Oct|Juin|Mai|Avril|Mars|Fev|Jan|3:|Dec|Nov|Oct|Juin|Mai|Avril|Mars|Fev|Jan"
+                  chxt="y,y,x,x"
                   ichm="78cdcf9f219c496fd62e790efee5e2d6cd17f47dfda65bc007cfb1a08cc22fd1"
                   icac="fgribreau" />
                 </mj-column>
