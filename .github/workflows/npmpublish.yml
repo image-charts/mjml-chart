@@ -20,8 +20,10 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+          github-token: ${{ secrets.coveralls_token }}
       - run: npm ci
       - run: npm run ci
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
