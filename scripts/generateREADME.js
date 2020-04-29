@@ -12,7 +12,7 @@ const README_IN = path.resolve(__dirname, 'templates/README.md.tmpl');
 
 const mdChartAttributesTable = table([
   ['attribute', 'description', 'value examples']
-].concat(chartAttributes.map(({name, link, description, examples}) => [`[${name}](${link})`, description, examples.map(example => `\`${truncate(example.toString(), 40).replace(/\|/g, '\\|')}\``).join(', ')])));
+].concat(chartAttributes.map(({name, link, description, examples}) => [`[${name}](${link})`, description, examples.map(example => `\`${truncate(example.toString(), 40).replace(/\|/g, '\\|').replace(/\n/g,'\\n')}\``).join(', ')])));
 
 const mdImageAttributesTable = table([
   ['attribute', 'default values']
