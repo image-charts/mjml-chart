@@ -4,7 +4,7 @@
   "version": "5.0.0",
   "main": "lib/index.js",
   "scripts": {
-    "ci": "npm run --silent generate-swagger && npm run --silent generate && npm run --silent test && npm run --silent test-coverage && npm run --silent coverage-send && npm run --silent updtr-commit && npm run release && npm run --silent changelog-commit && npm run --silent git-push",
+    "ci": "npm run --silent generate-swagger && npm run --silent generate && npm run --silent test && npm run --silent test-coverage && npm run --silent updtr-commit && npm run release && npm run --silent changelog-commit && npm run --silent git-push",
     "release": "(git commit -a -m 'prepare for release' || true) && (npm-release $(node -e 'console.log(require(\"./releaseVersion\")())') || true) && (npm run --silent git-push || true)",
     "test": "mocha --require babel-core/register",
     "test-watch": "mocha -w --require babel-core/register",
