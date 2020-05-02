@@ -1,0 +1,35 @@
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
+
+name: mjml-chart
+
+on:
+  schedule:
+    # Every week at 00:00 on Sunday
+    - cron:  '0 0 * * 0'
+  push:
+    branches:
+      - master
+
+jobs:
+  build-publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: |
+          git config --global user.name "github-action"
+          git config --global user.email "action@github.com"
+          npm run ci
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+

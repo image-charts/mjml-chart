@@ -10,13 +10,11 @@ Displays charts as images in your email. Note that the chart can be animated (gi
 ```xml
 <mjml>
   <mj-body>
-    <mj-container>
-      <mj-section>
-        <mj-column>
-          <mj-chart chs="700x200" chd="s:theresadifferencebetweenknowingthepathandwalkingthepath" cht="bvs" chxt="y" chf="b0,lg,90,4CA4F5,0.1,C371D3,0.8,EA469E,1" />
-        </mj-column>
-      </mj-section>
-    </mj-container>
+    <mj-section>
+      <mj-column>
+        <mj-chart chs="700x200" chd="s:theresadifferencebetweenknowingthepathandwalkingthepath" cht="bvs" chxt="y" chf="b0,lg,90,4CA4F5,0.1,C371D3,0.8,EA469E,1" />
+      </mj-column>
+    </mj-section>
   </mj-body>
 </mjml>
 ```
@@ -30,10 +28,18 @@ Displays charts as images in your email. Note that the chart can be animated (gi
 ##### 🚀 Setup
 
 
-- `mjml-chart` v5.x.x is built for *MJML4*:
+- `mjml-chart` v5.x.x is built for *MJML4* ([Community components](https://mjml.io/documentation/#community-components)):
 
 ```bash
 npm install mjml-chart@5 --save
+
+cat <<EOF > .mjmlconfig
+{
+  "packages": [
+    "mjml-chart/lib/index.js"
+  ]
+}
+EOF
 ```
 
 - `mjml-chart` v4.x.x is built for *MJML3*:

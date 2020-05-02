@@ -57,7 +57,7 @@ const chartAttributes = swagger.paths['/chart'].get.parameters
   .filter(parameter => parameter.in === 'query' && (meta(parameter).implementation.status === 'COMPLETE' || meta(parameter).implementation.status === 'PARTIAL'))
   .map(parameter => ({
     name: parameter.name,
-    link: `${DOCUMENTATION_ENDPOINT}${meta(parameter).link}`,
+    link: `${meta(parameter).link}`,
     description: parameter.description,
     examples: meta(parameter).examples,
     pattern: parameter.pattern,
