@@ -25,7 +25,6 @@ jobs:
           git config --global user.name "github-action"
           git config --global user.email "action@github.com"
           npm run ci
-      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
