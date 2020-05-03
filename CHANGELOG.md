@@ -1,7 +1,7 @@
-## <small>5.0.1 (2020-04-29)</small>
+## <small>5.0.2 (2020-05-03)</small>
 
-* Release v5.0.1. ([392db29](https://github.com/image-charts/mjml-chart/commit/392db29))
-* fix(ci): add name/email for git ([c32e7cd](https://github.com/image-charts/mjml-chart/commit/c32e7cd))
+* Merge branch 'btourman-github-action' ([978887b](https://github.com/image-charts/mjml-chart/commit/978887b))
+* Release v5.0.2. ([9c61566](https://github.com/image-charts/mjml-chart/commit/9c61566))
 
 
 
