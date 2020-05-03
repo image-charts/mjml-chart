@@ -1,7 +1,7 @@
 {
   "name": "mjml-chart",
   "description": "mjml-chart",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "main": "lib/index.js",
   "scripts": {
     "ci": "npm run --silent generate-swagger && npm run --silent generate && npm run --silent test && npm run --silent test-coverage && npm run --silent updtr-commit && npm run release && npm run --silent changelog-commit && npm run --silent git-push",
