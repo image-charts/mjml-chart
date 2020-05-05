@@ -1,7 +1,8 @@
-## <small>5.0.2 (2020-05-03)</small>
+## <small>5.0.2 (2020-05-05)</small>
 
-* Merge branch 'btourman-github-action' ([978887b](https://github.com/image-charts/mjml-chart/commit/978887b))
-* Release v5.0.2. ([9c61566](https://github.com/image-charts/mjml-chart/commit/9c61566))
+* prepare for release ([43bb7fd](https://github.com/image-charts/mjml-chart/commit/43bb7fd))
+* update deps ([83b1947](https://github.com/image-charts/mjml-chart/commit/83b1947))
+* fix(ci): use --reporter=basic with updatr ([8074259](https://github.com/image-charts/mjml-chart/commit/8074259))
 
 
 
