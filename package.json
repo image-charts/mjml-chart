@@ -4,8 +4,8 @@
   "version": "5.0.3",
   "main": "lib/index.js",
   "scripts": {
-    "ci": "npm run --silent generate-swagger && npm run --silent generate && npm run --silent test && npm run --silent test-coverage && npm run --silent updtr-commit && npm run release && npm run --silent changelog-commit && npm run --silent git-push",
-    "release": "(git commit -a -m 'prepare for release' || true) && (npm-release $(node -e 'console.log(require(\"./releaseVersion\")())') || true) && (npm run --silent git-push || true)",
+    "ci": "./ci.sh",
+    "release": "(git commit -a -m 'prepare for release' || true) && (npm-release $npm_config_release_version || true) && (npm run --silent git-push || true)",
     "test": "mocha --require babel-core/register",
     "test-watch": "mocha -w --require babel-core/register",
     "test-coverage": "nyc --all --statements=100 --branches=100 --functions=100 --lines=100 --check-coverage --reporter=lcov --reporter=cobertura --reporter=text --reporter=text-summary --report-dir=coverage -- npm run --silent test",
@@ -16,8 +16,8 @@
     "example-html": "babel-node examples/simple-chart.js > examples/simple-chart.html && open examples/simple-chart.html",
     "generate": "node scripts/generateREADME.js > README.md && node scripts/generateComponent.js > src/index.js && babel src/index.js > lib/index.js",
     "generate-watch": "chokidar 'scripts/**' 'package.json' -c 'npm run generate'",
-    "updtr": "updtr",
-    "updtr-commit": "npm run --silent updtr && (git add package.json && git commit -m 'update deps' || true)",
+    "@comment updr": "-r basic : Uses console.log for output, no need for a TTY (e.g when running on CI) => https://www.npmjs.com/package/updtr#--reporter--r",
+    "updtr": "updtr -r basic",
     "changelog": "git checkout master && conventional-changelog -i CHANGELOG.md -s -r 0",
     "changelog-commit": "npm run --silent changelog && (git add CHANGELOG.md && git commit -m 'docs(changelog): updated' || true)",
     "git-push": "git push origin master:master"
