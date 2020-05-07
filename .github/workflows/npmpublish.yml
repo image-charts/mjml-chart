@@ -4,6 +4,8 @@
 name: mjml-chart
 
 on:
+  repository_dispatch:
+    types: gitlab
   schedule:
     # Every week at 00:00 on Sunday
     - cron:  '0 0 * * 0'
