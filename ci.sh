@@ -18,7 +18,6 @@ echo $UPDATR_RESULT
 SWAGGER_VERSION=$(jq '.info.version' ./scripts/swagger.json)
 # Remove all "
 SWAGGER_VERSION=${SWAGGER_VERSION//\"/}
-echo $SWAGGER_VERSION
 
 MJML_CHART_VERSION=$(jq '.version' ./package.json)
 # Remove all "
