@@ -1,7 +1,8 @@
-## <small>5.0.5 (2020-05-10)</small>
+## <small>5.0.5 (2020-05-13)</small>
 
 * docs: update documentation ([62cebb1](https://github.com/image-charts/mjml-chart/commit/62cebb1))
 * docs: update swagger ([2b0a117](https://github.com/image-charts/mjml-chart/commit/2b0a117))
+* docs(changelog): updated ([c885bea](https://github.com/image-charts/mjml-chart/commit/c885bea))
 * docs(changelog): updated ([fdb1e93](https://github.com/image-charts/mjml-chart/commit/fdb1e93))
 * docs(changelog): updated ([fa61fce](https://github.com/image-charts/mjml-chart/commit/fa61fce))
 * docs(changelog): updated ([856681f](https://github.com/image-charts/mjml-chart/commit/856681f))
