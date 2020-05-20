@@ -2,6 +2,7 @@
 
 * docs: update documentation ([62cebb1](https://github.com/image-charts/mjml-chart/commit/62cebb1))
 * docs: update swagger ([2b0a117](https://github.com/image-charts/mjml-chart/commit/2b0a117))
+* docs(changelog): updated ([2e6dab8](https://github.com/image-charts/mjml-chart/commit/2e6dab8))
 * docs(changelog): updated ([8a2c233](https://github.com/image-charts/mjml-chart/commit/8a2c233))
 * docs(changelog): updated ([4a3e01a](https://github.com/image-charts/mjml-chart/commit/4a3e01a))
 * docs(changelog): updated ([69c4d2c](https://github.com/image-charts/mjml-chart/commit/69c4d2c))
