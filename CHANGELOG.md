@@ -1,4 +1,4 @@
-## <small>5.0.6 (2020-05-24)</small>
+## 5.1.0 (2020-05-25)
 
 *  fix: package-lock ([0dfb031](https://github.com/image-charts/mjml-chart/commit/0dfb031))
 * . ([426921d](https://github.com/image-charts/mjml-chart/commit/426921d))
@@ -28,6 +28,7 @@
 * fix(release) ([c53fe80](https://github.com/image-charts/mjml-chart/commit/c53fe80))
 * fix(tmpl) ([d3c5679](https://github.com/image-charts/mjml-chart/commit/d3c5679))
 * fix(typo) ([2729d95](https://github.com/image-charts/mjml-chart/commit/2729d95))
+* prepare for release ([ad5c303](https://github.com/image-charts/mjml-chart/commit/ad5c303))
 * prepare for release ([d5a8de9](https://github.com/image-charts/mjml-chart/commit/d5a8de9))
 * prepare for release ([4e4a5b8](https://github.com/image-charts/mjml-chart/commit/4e4a5b8))
 * prepare for release ([d2a73b3](https://github.com/image-charts/mjml-chart/commit/d2a73b3))
@@ -54,6 +55,7 @@
 * Release v5.0.4. ([9419d93](https://github.com/image-charts/mjml-chart/commit/9419d93))
 * Release v5.0.5. ([79770e7](https://github.com/image-charts/mjml-chart/commit/79770e7))
 * Release v5.0.6. ([a161590](https://github.com/image-charts/mjml-chart/commit/a161590))
+* Release v5.1.0. ([33d61f3](https://github.com/image-charts/mjml-chart/commit/33d61f3))
 * Support for Mjml4 (#3) ([45f9c4e](https://github.com/image-charts/mjml-chart/commit/45f9c4e)), closes [#3](https://github.com/image-charts/mjml-chart/issues/3)
 * update deps ([988ed94](https://github.com/image-charts/mjml-chart/commit/988ed94))
 * update deps ([fde5c7b](https://github.com/image-charts/mjml-chart/commit/fde5c7b))
@@ -66,6 +68,7 @@
 * Update README.md ([8e6e892](https://github.com/image-charts/mjml-chart/commit/8e6e892))
 * docs: update documentation ([62cebb1](https://github.com/image-charts/mjml-chart/commit/62cebb1))
 * docs: update swagger ([2b0a117](https://github.com/image-charts/mjml-chart/commit/2b0a117))
+* docs(changelog): updated ([5554e79](https://github.com/image-charts/mjml-chart/commit/5554e79))
 * docs(changelog): updated ([06e749d](https://github.com/image-charts/mjml-chart/commit/06e749d))
 * docs(changelog): updated ([2c00f9c](https://github.com/image-charts/mjml-chart/commit/2c00f9c))
 * docs(changelog): updated ([dee22ac](https://github.com/image-charts/mjml-chart/commit/dee22ac))
