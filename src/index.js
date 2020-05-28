@@ -109,7 +109,9 @@ const imageChartsParameters = [
   {
     "name": "chof",
     "examples": [
-      ".png"
+      ".png",
+      ".svg",
+      ".gif"
     ],
     "required": false
   },
