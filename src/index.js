@@ -109,7 +109,9 @@ const imageChartsParameters = [
   {
     "name": "chof",
     "examples": [
-      ".png"
+      ".png",
+      ".svg",
+      ".gif"
     ],
     "required": false
   },
@@ -1281,6 +1283,22 @@ const imageChartsParameters = [
       "0",
       "1"
     ]
+  },
+  {
+    "name": "icqrb",
+    "pattern": "^[0-9A-Fa-f]{6}(?:[0-9A-Fa-f]{2})?$",
+    "examples": [
+      "FFFFFF"
+    ],
+    "required": false
+  },
+  {
+    "name": "icqrf",
+    "pattern": "^[0-9A-Fa-f]{6}(?:[0-9A-Fa-f]{2})?$",
+    "examples": [
+      "000000"
+    ],
+    "required": false
   }
 ];
 
@@ -1355,6 +1373,8 @@ export default class MjChart extends BodyComponent {
   "icfs": "string",
   "iclocale": "string",
   "icretina": "string",
+  "icqrb": "string",
+  "icqrf": "string",
   "alt": "string",
   "name": "string",
   "srcset": "string",
