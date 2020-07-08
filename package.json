@@ -46,7 +46,7 @@
   },
   "homepage": "https://github.com/image-charts/mjml-chart",
   "dependencies": {
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.15",
     "mjml-core": "^4.6.3",
     "mjml-image": "^4.6.3"
   },
@@ -64,7 +64,7 @@
     "conventional-changelog": "^3.1.21",
     "conventional-changelog-cli": "^2.0.34",
     "coveralls": "^3.1.0",
-    "jq.node": "^2.1.2",
+    "jq.node": "^2.2.0",
     "markdown-table": "^2.0.0",
     "mjml": "^4.6.3",
     "mjml-cli": "^4.6.3",
