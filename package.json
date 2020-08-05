@@ -68,7 +68,7 @@
     "markdown-table": "^2.0.0",
     "mjml": "^4.6.3",
     "mjml-cli": "^4.6.3",
-    "mocha": "^8.1.0",
+    "mocha": "^8.1.1",
     "npm-release": "^1.0.0",
     "nyc": "^15.1.0",
     "truncate": "^2.0.1",
