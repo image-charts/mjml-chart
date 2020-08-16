@@ -253,6 +253,15 @@ const imageChartsParameters = [
     "required": false
   },
   {
+    "name": "chbr",
+    "pattern": "^[0-9]{1,3}$",
+    "examples": [
+      "5",
+      "10"
+    ],
+    "required": false
+  },
+  {
     "name": "chan",
     "pattern": "^[0-9]{2,4}(?:,(?:easeInQuad|easeOutQuad|easeInOutQuad|easeInCubic|easeOutCubic|easeInOutCubic|easeInQuart|easeOutQuart|easeInOutQuart|easeInQuint|easeOutQuint|easeInOutQuint|easeInSine|easeOutSine|easeInOutSine|easeInExpo|easeOutExpo|easeInOutExpo|easeInCirc|easeOutCirc|easeInOutCirc|easeInElastic|easeOutElastic|easeInOutElastic|easeInBack|easeOutBack|easeInOutBack|easeInBounce|easeOutBounce|easeInOutBounce))?$",
     "examples": [
@@ -1365,6 +1374,7 @@ export default class MjChart extends BodyComponent {
   "chma": "string",
   "chdlp": "string",
   "chf": "string",
+  "chbr": "string",
   "chan": "string",
   "chli": "string",
   "icac": "string",
