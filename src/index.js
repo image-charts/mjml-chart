@@ -230,6 +230,14 @@ const imageChartsParameters = [
     "required": false
   },
   {
+    "name": "chlps",
+    "pattern": "^(?:align|anchor|backgroundColor|borderColor|borderRadius|borderWidth|clamp|clip|color|display|font\\.size|font\\.style|font\\.weight|font\\.lineHeight|offset|opacity|padding|padding\\.top|padding\\.right|padding\\.bottom|padding\\.left|rotation|textAlign|textStrokeColor|textStrokeWidth|textShadowBlur|textShadowColor),(?:[0-9a-zA-Z.]+)(?:\\|(?:align|anchor|backgroundColor|borderColor|borderRadius|borderWidth|clamp|clip|color|display|font\\.size|font\\.style|font\\.weight|font\\.lineHeight|offset|opacity|padding|padding\\.top|padding\\.right|padding\\.bottom|padding\\.left|rotation|textAlign|textStrokeColor|textStrokeWidth|textShadowBlur|textShadowColor),(?:[0-9a-zA-Z.]+)){0,10}$",
+    "examples": [
+      "align,top|offset,10|color,FF00FF",
+      "align,top|offset,10|color,FF00FF"
+    ]
+  },
+  {
     "name": "chma",
     "pattern": "^(?:(?:[\\-0-9\\.]+),?)+\\|?(?:[\\-0-9\\.]\\,?)+$",
     "examples": [
@@ -1371,6 +1379,7 @@ export default class MjChart extends BodyComponent {
   "chm": "string",
   "chls": "string",
   "chl": "string",
+  "chlps": "string",
   "chma": "string",
   "chdlp": "string",
   "chf": "string",
