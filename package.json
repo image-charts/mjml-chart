@@ -47,8 +47,8 @@
   "homepage": "https://github.com/image-charts/mjml-chart",
   "dependencies": {
     "lodash": "^4.17.20",
-    "mjml-core": "^4.6.3",
-    "mjml-image": "^4.6.3"
+    "mjml-core": "^4.7.0",
+    "mjml-image": "^4.7.0"
   },
   "devDependencies": {
     "babel": "^6.23.0",
@@ -66,8 +66,8 @@
     "coveralls": "^3.1.0",
     "jq.node": "^2.2.0",
     "markdown-table": "^2.0.0",
-    "mjml": "^4.6.3",
-    "mjml-cli": "^4.6.3",
+    "mjml": "^4.7.0",
+    "mjml-cli": "^4.7.0",
     "mocha": "^8.1.3",
     "npm-release": "^1.0.0",
     "nyc": "^15.1.0",
