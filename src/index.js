@@ -1399,6 +1399,7 @@ export default class MjChart extends BodyComponent {
   "alt": "string",
   "name": "string",
   "srcset": "string",
+  "sizes": "string",
   "title": "string",
   "rel": "string",
   "align": "string",
@@ -1440,6 +1441,10 @@ export default class MjChart extends BodyComponent {
   },
   {
     "name": "srcset",
+    "link": "#mjml-image"
+  },
+  {
+    "name": "sizes",
     "link": "#mjml-image"
   },
   {
