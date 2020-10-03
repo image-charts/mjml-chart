@@ -1,3 +1,12 @@
+## <small>5.4.6 (2020-10-03)</small>
+
+* prepare for release ([2e18f56](https://github.com/image-charts/mjml-chart/commit/2e18f56))
+* Release v5.4.6. ([5df235b](https://github.com/image-charts/mjml-chart/commit/5df235b))
+* update deps ([5568e51](https://github.com/image-charts/mjml-chart/commit/5568e51))
+* docs(changelog): updated ([e636ce9](https://github.com/image-charts/mjml-chart/commit/e636ce9))
+
+
+
 ## <small>5.4.5 (2020-09-20)</small>
 
 * prepare for release ([0f93292](https://github.com/image-charts/mjml-chart/commit/0f93292))
