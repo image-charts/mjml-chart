@@ -98,6 +98,7 @@ Since `mjml-chart` is a wrapper for `mjml-image`, `mjml-image` attributes are al
 | [alt](#mjml-image)                        | n/a            |
 | [name](#mjml-image)                       | n/a            |
 | [srcset](#mjml-image)                     | n/a            |
+| [sizes](#mjml-image)                      | n/a            |
 | [title](#mjml-image)                      | n/a            |
 | [rel](#mjml-image)                        | n/a            |
 | [align](#mjml-image)                      | center         |
