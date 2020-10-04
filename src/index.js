@@ -1290,6 +1290,11 @@ const imageChartsParameters = [
     "name": "iclocale",
     "examples": [
       "en"
+    ],
+    "enum": [
+      "fr",
+      "de",
+      "en"
     ]
   },
   {
