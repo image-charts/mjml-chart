@@ -1,3 +1,12 @@
+## <small>5.6.1 (2020-12-17)</small>
+
+* 5.6.1 ([fedc477](https://github.com/image-charts/mjml-chart/commit/fedc477))
+* fix: update README with Troubleshooting section ([07a447c](https://github.com/image-charts/mjml-chart/commit/07a447c))
+* fix: update README with Troubleshooting section ([4d85f38](https://github.com/image-charts/mjml-chart/commit/4d85f38))
+* docs(changelog): updated ([713aabf](https://github.com/image-charts/mjml-chart/commit/713aabf))
+
+
+
 ## 5.6.0 (2020-11-15)
 
 * prepare for release ([42214f7](https://github.com/image-charts/mjml-chart/commit/42214f7))
