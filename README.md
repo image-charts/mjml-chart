@@ -129,3 +129,5 @@ Note:
 ### Receiving Error: `Error when registering custom component`
 
 If this warning appears in your log when you use mjml-chart, check your `mjml` version and be sure you have the last
+
+
