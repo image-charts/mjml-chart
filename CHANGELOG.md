@@ -1,5 +1,6 @@
 ## <small>5.6.1 (2020-12-22)</small>
 
+* docs(changelog): updated ([fc0d4d6](https://github.com/image-charts/mjml-chart/commit/fc0d4d6))
 * docs(changelog): updated ([948842d](https://github.com/image-charts/mjml-chart/commit/948842d))
 * docs(changelog): updated ([642de6a](https://github.com/image-charts/mjml-chart/commit/642de6a))
 * docs(changelog): updated ([4723911](https://github.com/image-charts/mjml-chart/commit/4723911))
