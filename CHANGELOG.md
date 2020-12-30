@@ -1,5 +1,9 @@
-## <small>5.6.1 (2020-12-27)</small>
+## <small>5.6.2 (2020-12-30)</small>
 
+* 5.6.1 ([fedc477](https://github.com/image-charts/mjml-chart/commit/fedc477))
+* Release v5.6.2. ([fdb9784](https://github.com/image-charts/mjml-chart/commit/fdb9784))
+* update deps ([750da7c](https://github.com/image-charts/mjml-chart/commit/750da7c))
+* docs(changelog): updated ([a471773](https://github.com/image-charts/mjml-chart/commit/a471773))
 * docs(changelog): updated ([c3ae5f5](https://github.com/image-charts/mjml-chart/commit/c3ae5f5))
 * docs(changelog): updated ([8e13692](https://github.com/image-charts/mjml-chart/commit/8e13692))
 * docs(changelog): updated ([fc0d4d6](https://github.com/image-charts/mjml-chart/commit/fc0d4d6))
@@ -7,7 +11,6 @@
 * docs(changelog): updated ([642de6a](https://github.com/image-charts/mjml-chart/commit/642de6a))
 * docs(changelog): updated ([4723911](https://github.com/image-charts/mjml-chart/commit/4723911))
 * docs(changelog): updated ([713aabf](https://github.com/image-charts/mjml-chart/commit/713aabf))
-* 5.6.1 ([fedc477](https://github.com/image-charts/mjml-chart/commit/fedc477))
 * fix: update README with Troubleshooting section ([07a447c](https://github.com/image-charts/mjml-chart/commit/07a447c))
 * fix: update README with Troubleshooting section ([4d85f38](https://github.com/image-charts/mjml-chart/commit/4d85f38))
 
