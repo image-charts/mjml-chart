@@ -1,3 +1,12 @@
+## <small>5.6.4 (2021-01-03)</small>
+
+* Release v5.6.4. ([6059615](https://github.com/image-charts/mjml-chart/commit/6059615))
+* update deps ([f4ff64c](https://github.com/image-charts/mjml-chart/commit/f4ff64c))
+* fix: remove ^ of mjml-* deps to avoid 4.8.1 which break actual implementation ([5695381](https://github.com/image-charts/mjml-chart/commit/5695381))
+* docs(changelog): updated ([19f1bca](https://github.com/image-charts/mjml-chart/commit/19f1bca))
+
+
+
 ## <small>5.6.3 (2021-01-03)</small>
 
 * Release v5.6.3. ([d4a3482](https://github.com/image-charts/mjml-chart/commit/d4a3482))
