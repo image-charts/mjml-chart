@@ -1,3 +1,11 @@
+## <small>5.6.10 (2021-01-11)</small>
+
+* Release v5.6.10. ([dd7e344](https://github.com/image-charts/mjml-chart/commit/dd7e344))
+* fix: update package-lock.json ([c7bb96e](https://github.com/image-charts/mjml-chart/commit/c7bb96e))
+* docs(changelog): updated ([423e074](https://github.com/image-charts/mjml-chart/commit/423e074))
+
+
+
 ## <small>5.6.9 (2021-01-11)</small>
 
 * Release v5.6.9. ([c404217](https://github.com/image-charts/mjml-chart/commit/c404217))
