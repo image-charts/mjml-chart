@@ -1,3 +1,11 @@
+## <small>5.6.9 (2021-01-11)</small>
+
+* Release v5.6.9. ([c404217](https://github.com/image-charts/mjml-chart/commit/c404217))
+* fix: exclude mjml-* of updtr to prevent 4.8.1 version ([5faaefe](https://github.com/image-charts/mjml-chart/commit/5faaefe))
+* docs(changelog): updated ([2e25c60](https://github.com/image-charts/mjml-chart/commit/2e25c60))
+
+
+
 ## <small>5.6.8 (2021-01-10)</small>
 
 * Release v5.6.8. ([bf716bd](https://github.com/image-charts/mjml-chart/commit/bf716bd))
