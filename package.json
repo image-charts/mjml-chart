@@ -17,7 +17,7 @@
     "generate": "node scripts/generateREADME.js > README.md && node scripts/generateComponent.js > src/index.js && babel src/index.js > lib/index.js",
     "generate-watch": "chokidar 'scripts/**' 'package.json' -c 'npm run generate'",
     "@comment updr": "-r basic : Uses console.log for output, no need for a TTY (e.g when running on CI) => https://www.npmjs.com/package/updtr#--reporter--r",
-    "updtr": "updtr -r basic",
+    "updtr": "updtr -r basic --exclude mjml-core mjml-image mjml mjml-cli",
     "changelog": "git checkout master && conventional-changelog -i CHANGELOG.md -s -r 0",
     "changelog-commit": "npm run --silent changelog && (git add CHANGELOG.md && git commit -m 'docs(changelog): updated' || true)",
     "git-push": "git push origin master:master"
@@ -47,8 +47,8 @@
   "homepage": "https://github.com/image-charts/mjml-chart",
   "dependencies": {
     "lodash": "^4.17.20",
-    "mjml-core": "^4.7.1",
-    "mjml-image": "^4.7.1"
+    "mjml-core": "4.7.1",
+    "mjml-image": "4.7.1"
   },
   "devDependencies": {
     "babel": "^6.23.0",
@@ -66,8 +66,8 @@
     "coveralls": "^3.1.0",
     "jq.node": "^2.2.0",
     "markdown-table": "^2.0.0",
-    "mjml": "^4.7.1",
-    "mjml-cli": "^4.7.1",
+    "mjml": "4.7.1",
+    "mjml-cli": "4.7.1",
     "mocha": "^8.2.1",
     "npm-release": "^1.0.0",
     "nyc": "^15.1.0",
