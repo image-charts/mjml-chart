@@ -1,3 +1,10 @@
+## <small>5.6.51 (2021-03-21)</small>
+
+* Release v5.6.51. ([db70c7d](https://github.com/image-charts/mjml-chart/commit/db70c7d))
+* docs(changelog): updated ([02c5878](https://github.com/image-charts/mjml-chart/commit/02c5878))
+
+
+
 ## <small>5.6.50 (2021-03-19)</small>
 
 * Release v5.6.50. ([53c469a](https://github.com/image-charts/mjml-chart/commit/53c469a))
