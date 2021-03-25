@@ -1,3 +1,11 @@
+## <small>5.6.54 (2021-03-25)</small>
+
+* Release v5.6.54. ([5192aad](https://github.com/image-charts/mjml-chart/commit/5192aad))
+* fix: update mjml-* + exclude markdown-table update (#68) ([51b58ec](https://github.com/image-charts/mjml-chart/commit/51b58ec)), closes [#68](https://github.com/image-charts/mjml-chart/issues/68)
+* docs(changelog): updated ([76b207e](https://github.com/image-charts/mjml-chart/commit/76b207e))
+
+
+
 ## <small>5.6.53 (2021-03-25)</small>
 
 * Release v5.6.53. ([4ec5260](https://github.com/image-charts/mjml-chart/commit/4ec5260))
