@@ -1,3 +1,11 @@
+## <small>5.6.103 (2021-06-27)</small>
+
+* Release v5.6.103. ([25c832a](https://github.com/image-charts/mjml-chart/commit/25c832a))
+* fix: change nyc reporter dir to .coverage ([0f4f265](https://github.com/image-charts/mjml-chart/commit/0f4f265))
+* docs(changelog): updated ([14f1f0f](https://github.com/image-charts/mjml-chart/commit/14f1f0f))
+
+
+
 ## <small>5.6.102 (2021-06-27)</small>
 
 * prepare for release ([26b4450](https://github.com/image-charts/mjml-chart/commit/26b4450))
