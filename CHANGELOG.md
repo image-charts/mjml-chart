@@ -1,3 +1,11 @@
+## <small>5.6.104 (2021-06-27)</small>
+
+* Release v5.6.104. ([629a3e1](https://github.com/image-charts/mjml-chart/commit/629a3e1))
+* fix: ci ([64c7d52](https://github.com/image-charts/mjml-chart/commit/64c7d52))
+* docs(changelog): updated ([63a72ed](https://github.com/image-charts/mjml-chart/commit/63a72ed))
+
+
+
 ## <small>5.6.103 (2021-06-27)</small>
 
 * Release v5.6.103. ([25c832a](https://github.com/image-charts/mjml-chart/commit/25c832a))
