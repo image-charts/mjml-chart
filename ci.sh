@@ -4,10 +4,10 @@ release_changelog_push () {
   npm run release --release_version=$1
 }
 
-npm run --silent generate-swagger && \
-npm run --silent generate && \
-npm run --silent test && \
-npm run --silent test-coverage && \
+npm run --silent generate-swagger
+npm run --silent generate
+npm run --silent test
+npm run --silent test-coverage
 
 echo "Update deps"
 UPDATR_RESULT=$(npm run --silent updtr)
