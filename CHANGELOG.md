@@ -1,3 +1,12 @@
+## <small>5.6.102 (2021-06-27)</small>
+
+* prepare for release ([26b4450](https://github.com/image-charts/mjml-chart/commit/26b4450))
+* Release v5.6.102. ([835e99c](https://github.com/image-charts/mjml-chart/commit/835e99c))
+* fix: add @babel/runtime ([f10e148](https://github.com/image-charts/mjml-chart/commit/f10e148))
+* docs(changelog): updated ([611bb5b](https://github.com/image-charts/mjml-chart/commit/611bb5b))
+
+
+
 ## <small>5.6.101 (2021-06-27)</small>
 
 * Release v5.6.101. ([1d0bd80](https://github.com/image-charts/mjml-chart/commit/1d0bd80))
