@@ -1,3 +1,12 @@
+## <small>5.6.124 (2021-08-10)</small>
+
+* Release v5.6.124. ([9e9df36](https://github.com/image-charts/mjml-chart/commit/9e9df36))
+* update deps ([a486fe7](https://github.com/image-charts/mjml-chart/commit/a486fe7))
+* fix: remove babel useless dep ([9b6781d](https://github.com/image-charts/mjml-chart/commit/9b6781d))
+* docs(changelog): updated ([933d78f](https://github.com/image-charts/mjml-chart/commit/933d78f))
+
+
+
 ## <small>5.6.123 (2021-08-08)</small>
 
 * Release v5.6.123. ([8d664f6](https://github.com/image-charts/mjml-chart/commit/8d664f6))
