@@ -1,3 +1,10 @@
+## <small>5.6.148 (2021-11-05)</small>
+
+* Release v5.6.148. ([ddf2ced](https://github.com/image-charts/mjml-chart/commit/ddf2ced))
+* docs(changelog): updated ([5885045](https://github.com/image-charts/mjml-chart/commit/5885045))
+
+
+
 ## <small>5.6.147 (2021-11-05)</small>
 
 * prepare for release ([7647cc4](https://github.com/image-charts/mjml-chart/commit/7647cc4))
