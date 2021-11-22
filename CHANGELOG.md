@@ -1,3 +1,11 @@
+## 6.0.0 (2021-11-22)
+
+* prepare for release ([d78be45](https://github.com/image-charts/mjml-chart/commit/d78be45))
+* Release v6.0.0. ([7accbc4](https://github.com/image-charts/mjml-chart/commit/7accbc4))
+* docs(changelog): updated ([f0a36e3](https://github.com/image-charts/mjml-chart/commit/f0a36e3))
+
+
+
 ## <small>5.6.157 (2021-11-21)</small>
 
 * Release v5.6.157. ([e73f392](https://github.com/image-charts/mjml-chart/commit/e73f392))
