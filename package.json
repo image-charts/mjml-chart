@@ -1,7 +1,7 @@
 {
   "name": "mjml-chart",
   "description": "mjml-chart",
-  "version": "6.1.28",
+  "version": "6.1.29",
   "main": "lib/index.js",
   "scripts": {
     "ci": "./ci.sh",
