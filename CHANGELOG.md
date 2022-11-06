@@ -1,3 +1,11 @@
+## <small>6.1.53 (2022-11-06)</small>
+
+* Release v6.1.53. ([ecd3bdf](https://github.com/image-charts/mjml-chart/commit/ecd3bdf))
+* update deps ([5fc76ad](https://github.com/image-charts/mjml-chart/commit/5fc76ad))
+* docs(changelog): updated ([2ede39e](https://github.com/image-charts/mjml-chart/commit/2ede39e))
+
+
+
 ## <small>6.1.52 (2022-10-31)</small>
 
 * Release v6.1.52. ([1b19387](https://github.com/image-charts/mjml-chart/commit/1b19387))
