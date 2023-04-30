@@ -1,3 +1,11 @@
+## <small>6.1.85 (2023-04-30)</small>
+
+* Release v6.1.85. ([e0567ed](https://github.com/image-charts/mjml-chart/commit/e0567ed))
+* update deps ([5597257](https://github.com/image-charts/mjml-chart/commit/5597257))
+* docs(changelog): updated ([12f8133](https://github.com/image-charts/mjml-chart/commit/12f8133))
+
+
+
 ## <small>6.1.84 (2023-04-23)</small>
 
 * Release v6.1.84. ([acf933b](https://github.com/image-charts/mjml-chart/commit/acf933b))
