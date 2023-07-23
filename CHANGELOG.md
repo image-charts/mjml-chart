@@ -1,3 +1,11 @@
+## <small>6.1.100 (2023-07-23)</small>
+
+* prepare for release ([1fee3a7](https://github.com/image-charts/mjml-chart/commit/1fee3a7))
+* Release v6.1.100. ([f73c369](https://github.com/image-charts/mjml-chart/commit/f73c369))
+* docs(changelog): updated ([bdf12f5](https://github.com/image-charts/mjml-chart/commit/bdf12f5))
+
+
+
 ## <small>6.1.99 (2023-07-19)</small>
 
 * Release v6.1.99. ([b3beefa](https://github.com/image-charts/mjml-chart/commit/b3beefa))
