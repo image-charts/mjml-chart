@@ -1,3 +1,11 @@
+## <small>6.1.101 (2023-07-30)</small>
+
+* Release v6.1.101. ([2d185d4](https://github.com/image-charts/mjml-chart/commit/2d185d4))
+* update deps ([d995c9e](https://github.com/image-charts/mjml-chart/commit/d995c9e))
+* docs(changelog): updated ([b1506d3](https://github.com/image-charts/mjml-chart/commit/b1506d3))
+
+
+
 ## <small>6.1.100 (2023-07-23)</small>
 
 * prepare for release ([1fee3a7](https://github.com/image-charts/mjml-chart/commit/1fee3a7))
