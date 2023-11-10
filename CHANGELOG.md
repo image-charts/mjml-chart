@@ -1,3 +1,10 @@
+## <small>6.1.166 (2023-11-10)</small>
+
+* Release v6.1.166. ([5c4f61b](https://github.com/image-charts/mjml-chart/commit/5c4f61b))
+* docs(changelog): updated ([ef20d25](https://github.com/image-charts/mjml-chart/commit/ef20d25))
+
+
+
 ## <small>6.1.165 (2023-11-10)</small>
 
 * Release v6.1.165. ([e3870cc](https://github.com/image-charts/mjml-chart/commit/e3870cc))
