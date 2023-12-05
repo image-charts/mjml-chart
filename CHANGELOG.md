@@ -1,3 +1,10 @@
+## <small>6.1.180 (2023-12-05)</small>
+
+* Release v6.1.180. ([68b12b2](https://github.com/image-charts/mjml-chart/commit/68b12b2))
+* docs(changelog): updated ([a0c9047](https://github.com/image-charts/mjml-chart/commit/a0c9047))
+
+
+
 ## <small>6.1.179 (2023-12-03)</small>
 
 * Release v6.1.179. ([c4711d7](https://github.com/image-charts/mjml-chart/commit/c4711d7))
