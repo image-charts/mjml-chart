@@ -1,3 +1,10 @@
+## <small>6.1.271 (2025-02-23)</small>
+
+* Release v6.1.271. ([cdfc000](https://github.com/image-charts/mjml-chart/commit/cdfc000))
+* docs(changelog): updated ([5fb8c1c](https://github.com/image-charts/mjml-chart/commit/5fb8c1c))
+
+
+
 ## <small>6.1.270 (2025-02-23)</small>
 
 * Release v6.1.270. ([8a98f91](https://github.com/image-charts/mjml-chart/commit/8a98f91))
