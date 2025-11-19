@@ -1,3 +1,11 @@
+## <small>6.1.358 (2025-11-19)</small>
+
+* Release v6.1.358. ([21a5657](https://github.com/image-charts/mjml-chart/commit/21a5657))
+* update deps ([ecac563](https://github.com/image-charts/mjml-chart/commit/ecac563))
+* docs(changelog): updated ([bd83dfd](https://github.com/image-charts/mjml-chart/commit/bd83dfd))
+
+
+
 ## <small>6.1.357 (2025-11-17)</small>
 
 * Release v6.1.357. ([b30854d](https://github.com/image-charts/mjml-chart/commit/b30854d))
