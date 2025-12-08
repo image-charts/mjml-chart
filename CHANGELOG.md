@@ -1,3 +1,10 @@
+## <small>6.1.380 (2025-12-08)</small>
+
+* Release v6.1.380. ([64c3852](https://github.com/image-charts/mjml-chart/commit/64c3852))
+* docs(changelog): updated ([da8b87a](https://github.com/image-charts/mjml-chart/commit/da8b87a))
+
+
+
 ## <small>6.1.379 (2025-12-07)</small>
 
 * Release v6.1.379. ([8e888ef](https://github.com/image-charts/mjml-chart/commit/8e888ef))
