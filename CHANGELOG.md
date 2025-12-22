@@ -1,3 +1,10 @@
+## <small>6.1.394 (2025-12-22)</small>
+
+* Release v6.1.394. ([e2d0c46](https://github.com/image-charts/mjml-chart/commit/e2d0c46))
+* docs(changelog): updated ([dd4de3d](https://github.com/image-charts/mjml-chart/commit/dd4de3d))
+
+
+
 ## <small>6.1.393 (2025-12-21)</small>
 
 * Release v6.1.393. ([ff59d63](https://github.com/image-charts/mjml-chart/commit/ff59d63))
