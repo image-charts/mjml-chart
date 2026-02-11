@@ -1,3 +1,10 @@
+## <small>6.1.468 (2026-02-11)</small>
+
+* Release v6.1.468. ([eadabf7](https://github.com/image-charts/mjml-chart/commit/eadabf7))
+* docs(changelog): updated ([5c128ce](https://github.com/image-charts/mjml-chart/commit/5c128ce))
+
+
+
 ## <small>6.1.467 (2026-02-11)</small>
 
 * Release v6.1.467. ([48518ff](https://github.com/image-charts/mjml-chart/commit/48518ff))
