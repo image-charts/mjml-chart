@@ -1,3 +1,10 @@
+## <small>6.1.582 (2026-03-22)</small>
+
+* Release v6.1.582. ([b7ce24d](https://github.com/image-charts/mjml-chart/commit/b7ce24d))
+* docs(changelog): updated ([cfdcaad](https://github.com/image-charts/mjml-chart/commit/cfdcaad))
+
+
+
 ## <small>6.1.581 (2026-03-21)</small>
 
 * Release v6.1.581. ([96a9151](https://github.com/image-charts/mjml-chart/commit/96a9151))
