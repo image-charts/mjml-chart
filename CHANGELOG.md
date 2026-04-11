@@ -1,3 +1,11 @@
+## <small>6.1.631 (2026-04-11)</small>
+
+* Release v6.1.631. ([91a4932](https://github.com/image-charts/mjml-chart/commit/91a4932))
+* update deps ([a41e07e](https://github.com/image-charts/mjml-chart/commit/a41e07e))
+* docs(changelog): updated ([a1a7113](https://github.com/image-charts/mjml-chart/commit/a1a7113))
+
+
+
 ## <small>6.1.630 (2026-04-10)</small>
 
 * Release v6.1.630. ([faae307](https://github.com/image-charts/mjml-chart/commit/faae307))
