@@ -1,3 +1,10 @@
+## <small>6.1.759 (2026-05-30)</small>
+
+* Release v6.1.759. ([a3995e0](https://github.com/image-charts/mjml-chart/commit/a3995e0))
+* docs(changelog): updated ([c41f526](https://github.com/image-charts/mjml-chart/commit/c41f526))
+
+
+
 ## <small>6.1.758 (2026-05-29)</small>
 
 * Release v6.1.758. ([bfc470d](https://github.com/image-charts/mjml-chart/commit/bfc470d))
