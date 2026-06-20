@@ -1,3 +1,11 @@
+## <small>6.1.818 (2026-06-20)</small>
+
+* Release v6.1.818. ([f3f26e7](https://github.com/image-charts/mjml-chart/commit/f3f26e7))
+* update deps ([aad7c2d](https://github.com/image-charts/mjml-chart/commit/aad7c2d))
+* docs(changelog): updated ([0a7b55e](https://github.com/image-charts/mjml-chart/commit/0a7b55e))
+
+
+
 ## <small>6.1.817 (2026-06-20)</small>
 
 * Release v6.1.817. ([e75b224](https://github.com/image-charts/mjml-chart/commit/e75b224))
