@@ -1,3 +1,10 @@
+## <small>6.1.828 (2026-06-22)</small>
+
+* Release v6.1.828. ([ed7ccc2](https://github.com/image-charts/mjml-chart/commit/ed7ccc2))
+* docs(changelog): updated ([b86ae32](https://github.com/image-charts/mjml-chart/commit/b86ae32))
+
+
+
 ## <small>6.1.827 (2026-06-22)</small>
 
 * Release v6.1.827. ([0aad442](https://github.com/image-charts/mjml-chart/commit/0aad442))
