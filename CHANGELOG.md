@@ -1,3 +1,10 @@
+## <small>6.1.881 (2026-07-11)</small>
+
+* Release v6.1.881. ([fffcad1](https://github.com/image-charts/mjml-chart/commit/fffcad1))
+* docs(changelog): updated ([922c13b](https://github.com/image-charts/mjml-chart/commit/922c13b))
+
+
+
 ## <small>6.1.880 (2026-07-10)</small>
 
 * Release v6.1.880. ([7f870f6](https://github.com/image-charts/mjml-chart/commit/7f870f6))
