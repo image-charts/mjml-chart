@@ -1,3 +1,11 @@
+## <small>6.1.910 (2026-08-01)</small>
+
+* Release v6.1.910. ([c5cb2b5](https://github.com/image-charts/mjml-chart/commit/c5cb2b5))
+* update deps ([cbbb264](https://github.com/image-charts/mjml-chart/commit/cbbb264))
+* docs(changelog): updated ([a69f087](https://github.com/image-charts/mjml-chart/commit/a69f087))
+
+
+
 ## <small>6.1.909 (2026-07-31)</small>
 
 * Release v6.1.909. ([bd93d9f](https://github.com/image-charts/mjml-chart/commit/bd93d9f))
