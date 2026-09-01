@@ -1,3 +1,11 @@
+## <small>6.1.993 (2026-09-01)</small>
+
+* Release v6.1.993. ([8e414c7](https://github.com/image-charts/mjml-chart/commit/8e414c7))
+* update deps ([d4db00f](https://github.com/image-charts/mjml-chart/commit/d4db00f))
+* docs(changelog): updated ([2bf3636](https://github.com/image-charts/mjml-chart/commit/2bf3636))
+
+
+
 ## <small>6.1.992 (2026-08-31)</small>
 
 * Release v6.1.992. ([a2de7f0](https://github.com/image-charts/mjml-chart/commit/a2de7f0))
