@@ -1,3 +1,11 @@
+## <small>6.1.1132 (2026-10-11)</small>
+
+* Release v6.1.1132. ([af21aca](https://github.com/image-charts/mjml-chart/commit/af21aca))
+* update deps ([7aa6949](https://github.com/image-charts/mjml-chart/commit/7aa6949))
+* docs(changelog): updated ([be3758c](https://github.com/image-charts/mjml-chart/commit/be3758c))
+
+
+
 ## <small>6.1.1131 (2026-10-11)</small>
 
 * Release v6.1.1131. ([555b148](https://github.com/image-charts/mjml-chart/commit/555b148))
